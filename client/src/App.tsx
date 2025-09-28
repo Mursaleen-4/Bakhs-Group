@@ -9,13 +9,21 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
+const YaaseenAbout = React.lazy(() => import('./pages/YaaseenAbout'));
+const Gallery = React.lazy(() => import('./pages/Gallery'));
+const Quote = React.lazy(() => import('./pages/Quote'));
 const BakshInvestment = React.lazy(() => import('./pages/BakshInvestment'));
+const BakshGroup = React.lazy(() => import('./pages/BakshGroup'));
+const YaaseenShippingPVT = React.lazy(() => import('./pages/YaaseenShippingPVT'));
 const UOSL = React.lazy(() => import('./pages/UOSL'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const EServices = React.lazy(() => import('./pages/EServices'));
 const EServiceDetail = React.lazy(() => import('./pages/EServiceDetail'));
+const Tariffs = React.lazy(() => import('./pages/Tariffs'));
+const Schedule = React.lazy(() => import('./pages/Schedule'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
-
+const Blogs = React.lazy(() => import('./pages/Blogs'));
+const Login = React.lazy(() => import('./pages/Login'));
 
 const PageLoader: React.FC = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -54,7 +62,7 @@ function App() {
       <Router>
         {/* ⚠️ Remove AuthProvider if it doesn't exist */}
         {/* <AuthProvider> */}
-        <div className="App min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+        <div className="App min-h-screen bg-black text-white">
 
           <Toaster
             position="top-right"
@@ -62,17 +70,17 @@ function App() {
             containerClassName="z-50"
             toastOptions={{
               duration: 4000,
-              className: 'bg-white border border-gray-200 shadow-lg rounded-lg',
+              className: 'bg-gray-900 border border-gray-700 shadow-lg rounded-lg text-white',
               success: {
                 iconTheme: {
                   primary: '#10b981',
-                  secondary: '#ffffff',
+                  secondary: '#000000',
                 },
               },
               error: {
                 iconTheme: {
                   primary: '#ef4444',
-                  secondary: '#ffffff',
+                  secondary: '#000000',
                 },
               },
             }}
@@ -92,6 +100,16 @@ function App() {
                   }
                 />
                 <Route
+                  path="/baksh-group"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <BakshGroup />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                <Route
                   path="/baksh-investment"
                   element={
                     <Layout>
@@ -100,7 +118,17 @@ function App() {
                       </AnimatedRoute>
                     </Layout>
                   }
-                  />
+                />
+                <Route
+                  path="/yaaseen-shipping-pvt"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <YaaseenShippingPVT />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
                  <Route
                   path="/UOSL"
                   element={
@@ -122,6 +150,56 @@ function App() {
                   }
                 />
                 <Route
+                  path="/yaaseen-about"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <YaaseenAbout />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                <Route
+                  path="/gallery"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <Gallery />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                <Route
+                  path="/blogs"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <Blogs />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                <Route
+                  path="/login"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <Login />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                <Route
+                  path="/quote"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <Quote />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                <Route
                   path="/contact"
                   element={
                     <Layout>
@@ -132,7 +210,7 @@ function App() {
                   }
                 />
                 <Route
-                  path="/eservices"
+                  path="/services"
                   element={
                     <Layout>
                       <AnimatedRoute>
@@ -142,7 +220,7 @@ function App() {
                   }
                 />
                 <Route
-                  path="/eservices/:id"
+                  path="/services/:id"
                   element={
                     <Layout>
                       <AnimatedRoute>
@@ -151,8 +229,28 @@ function App() {
                     </Layout>
                   }
                 />
+                {/* Backward compatibility redirect */}
+                <Route path="/eservices" element={<Navigate to="/services" replace />} />
+                <Route path="/eservices/:id" element={<Navigate to="/services/:id" replace />} />
                 <Route
-
+                  path="/tariffs"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <Tariffs />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                <Route
+                  path="/schedule"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <Schedule />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
                 />
 
                 <Route path="/home" element={<Navigate to="/" replace />} />

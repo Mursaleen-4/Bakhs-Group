@@ -5,6 +5,7 @@ import { Ship, Users, Award, TrendingUp, MapPin, Phone, Mail } from 'lucide-reac
 import HeroCarousel from '../components/HeroCarousel';
 import Testimonials from '../components/Testimonials';
 import SocialMedia from '../components/SocialMedia';
+import { pageBackgrounds } from '../assets/videos';
 
 const Home: React.FC = () => {
   const stats = [

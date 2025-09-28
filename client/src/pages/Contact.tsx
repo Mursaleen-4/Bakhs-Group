@@ -14,6 +14,7 @@ import {
   ExternalLink,
   Calendar
 } from 'lucide-react';
+import { pageBackgrounds } from '../assets/videos';
 
 
 const Contact: React.FC = () => {
@@ -116,8 +117,14 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-primary-600 via-primary-700 to-blue-800 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative text-white py-16 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${pageBackgrounds.contact})`
+          }}
+        />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32" />
         
@@ -515,9 +522,15 @@ const Contact: React.FC = () => {
                   <p className="text-blue-100 mb-4 text-sm">
                     Book a consultation with our specialists
                   </p>
-                  <button className="btn bg-white text-primary-600 hover:bg-gray-100 btn-sm w-full">
+                  <a
+                    href="https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=Meeting%20Request&startdt=2025-09-16T10:00:00&enddt=2025-09-16T11:00:00&body=Hello%20Yaaseen%20Shipping%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20meeting%20to%20discuss%20my%20requirements.%0A%0ABest%20regards%2C"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn bg-white text-primary-600 hover:bg-gray-100 btn-sm w-full inline-flex items-center justify-center"
+                  >
                     Schedule Now
-                  </button>
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
                 </motion.div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, Container, Target, Clock, Shield, Truck } from 'lucide-react';
+import { pageBackgrounds } from '../assets/videos';
 
 const UOSL: React.FC = () => {
   const stats = [
@@ -22,10 +23,15 @@ const UOSL: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-800 to-primary-900 text-white py-24 md:py-32">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070')] bg-cover bg-center opacity-40"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/85"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
+      <section className="relative bg-gradient-to-r from-blue-800 to-blue-900 text-white pt-28 pb-20 sm:py-24 md:py-32">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{
+            backgroundImage: `url(${pageBackgrounds.uosl})`
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8 sm:py-16">
           <div className="text-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -39,7 +45,7 @@ const UOSL: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-bold mb-6 leading-tight max-w-4xl mx-auto"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight max-w-4xl mx-auto px-4"
             >
               Pioneering Excellence in Container Logistics
             </motion.h1>
@@ -47,12 +53,12 @@ const UOSL: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-xl md:text-2xl text-primary-100 max-w-4xl mx-auto leading-relaxed mb-10"
+              className="text-lg sm:text-xl md:text-2xl text-primary-100 max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-10 px-4"
             >
               Your trusted partner for comprehensive container management and logistics solutions across Pakistan
             </motion.p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 px-4 sm:px-0">
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +103,7 @@ const UOSL: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section className="relative py-20 bg-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
         <div className="absolute -right-20 -top-20 w-64 h-64 bg-primary-100 rounded-full opacity-20"></div>
         <div className="absolute -left-20 -bottom-20 w-96 h-96 bg-primary-100 rounded-full opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -160,10 +166,10 @@ const UOSL: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1800')] bg-cover bg-center opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8 px-4 sm:px-0">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (

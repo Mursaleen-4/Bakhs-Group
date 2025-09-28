@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Linkedin, Instagram, Youtube, Twitter, ExternalLink } from 'lucide-react';
+import { Facebook, Linkedin, ExternalLink } from 'lucide-react';
 
 const SocialMedia: React.FC = () => {
   const socialPlatforms = [
@@ -17,27 +17,6 @@ const SocialMedia: React.FC = () => {
       url: 'https://linkedin.com/company/yaaseen-shipping-lines',
       color: 'bg-blue-700 hover:bg-blue-800',
       description: 'Connect with us professionally'
-    },
-    {
-      name: 'Instagram',
-      icon: Instagram,
-      url: 'https://instagram.com/yaaseenshippinglines',
-      color: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600',
-      description: 'See our operations behind the scenes'
-    },
-    {
-      name: 'YouTube',
-      icon: Youtube,
-      url: 'https://youtube.com/@yaaseenshippinglines',
-      color: 'bg-red-600 hover:bg-red-700',
-      description: 'Watch our service videos and documentaries'
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      url: 'https://twitter.com/yaaseen_shipping',
-      color: 'bg-sky-500 hover:bg-sky-600',
-      description: 'Get real-time shipping updates'
     }
   ];
 
@@ -62,7 +41,7 @@ const SocialMedia: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-blue-800 relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-br from-primary-600 via-primary-700 to-blue-800 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" 
@@ -73,7 +52,7 @@ const SocialMedia: React.FC = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -84,30 +63,30 @@ const SocialMedia: React.FC = () => {
             <ExternalLink className="w-8 h-8 text-white" />
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             GET SOCIAL WITH US
           </h2>
           
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
             Stay connected and get the latest updates on our maritime services, industry insights, 
             and company developments across all our social media platforms.
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {socialPlatforms.map((platform) => {
+          {socialPlatforms.slice(0,2).map((platform, idx) => {
             const Icon = platform.icon;
             return (
               <motion.div
                 key={platform.name}
                 className="group"
                 variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ y: -4, rotate: idx % 2 ? 0.5 : -0.5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <a
@@ -140,12 +119,12 @@ const SocialMedia: React.FC = () => {
 
         {/* Social Media Stats */}
         <motion.div
-          className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/20"
+          className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <motion.div
                 className="text-4xl lg:text-5xl font-bold text-yellow-300 mb-2"

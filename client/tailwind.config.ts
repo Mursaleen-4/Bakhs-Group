@@ -8,16 +8,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Semantic colors (for border-border, bg-background, etc.)
-        border: 'hsl(214, 32%, 91%)',
-        input: 'hsl(210, 40%, 96%)',
-        ring: 'hsl(215, 20.2%, 65.1%)',
-        background: 'hsl(0, 0%, 100%)',
-        foreground: 'hsl(222.2, 47.4%, 11.2%)',
+        // Semantic colors
+        border: 'hsl(0, 0%, 20%)',
+        input: 'hsl(0, 0%, 15%)',
+        ring: 'hsl(215, 20.2%, 40%)',
+        background: 'hsl(0, 0%, 0%)',
+        foreground: 'hsl(0, 0.00%, 0.00%)',
 
         primary: {
-          DEFAULT: '#3b82f6',
-          foreground: '#ffffff',
+          DEFAULT: '#60a5fa',
+          foreground: '#000000',
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -31,8 +31,8 @@ const config: Config = {
           950: '#172554',
         },
         secondary: {
-          DEFAULT: '#64748b',
-          foreground: '#ffffff',
+          DEFAULT: '#94a3b8',
+          foreground: '#000000',
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -45,9 +45,36 @@ const config: Config = {
           900: '#0f172a',
           950: '#020617',
         },
+        // Video-specific text colors
+        video: {
+          dark: {
+            text: '#ffffff',
+            subtitle: '#bfdbfe', // blue-200
+            description: '#e5e7eb', // gray-200
+            cta: '#2563eb', // blue-600
+            ctaText: '#ffffff',
+            statsBg: 'rgba(0, 0, 0, 0.3)'
+          },
+          mixed: {
+            text: '#1e3a8a', // navy-900
+            subtitle: '#1e40af', // blue-900
+            description: '#1f2937', // gray-800
+            cta: '#0d9488', // teal-600
+            ctaText: '#ffffff',
+            statsBg: 'rgba(255, 255, 255, 0.6)'
+          },
+          light: {
+            text: '#172554', // blue-950
+            subtitle: '#1e40af', // blue-800
+            description: '#1f2937', // gray-800
+            cta: '#dc2626', // red-600
+            ctaText: '#ffffff',
+            statsBg: 'rgba(255, 255, 255, 0.7)'
+          }
+        },
         accent: {
-          DEFAULT: '#f59e0b',
-          foreground: '#ffffff',
+          DEFAULT: '#fbbf24',
+          foreground: '#000000',
           50: '#fef3c7',
           100: '#fde68a',
           200: '#fcd34d',
@@ -113,6 +140,20 @@ const config: Config = {
         card: {
           DEFAULT: 'hsl(0, 0%, 100%)',
           foreground: 'hsl(222.2, 47.4%, 11.2%)',
+        },
+
+        // ✅ Custom Maroon Shades
+        maroon: {
+          50: '#fdf2f2',
+          100: '#fce8e8',
+          200: '#f8c6c6',
+          300: '#f39898',
+          400: '#dd5c5c',
+          500: '#a83232',
+          600: '#922929',
+          700: '#6b1e1e',
+          800: '#4b0000', // Dark Maroon
+          900: '#2a0000', // Deepest Maroon
         },
       },
       fontFamily: {

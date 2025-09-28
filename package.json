@@ -35,6 +35,8 @@
   "author": "Your Shipping Co.",
   "license": "MIT",
   "dependencies": {
-    "jsonwebtoken": "^9.0.2"
+    "axios": "^1.12.2",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^4.1.8"
   }
 }

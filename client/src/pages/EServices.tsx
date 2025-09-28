@@ -16,7 +16,6 @@ import {
   Globe,
   Warehouse,
   ClipboardCheck,
-  FileSpreadsheet,
   BarChart2,
   ShieldCheck
 } from "lucide-react";
@@ -153,7 +152,7 @@ const services: IService[] = [
 const EServices: FC = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [filteredServices, setFilteredServices] = useState<IService[]>(services);
-  const [activeTab, setActiveTab] = useState<'all' | 'main' | 'e-service'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'main' | 'e-service'>('main');
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     const searchValue = e.target.value.toLowerCase();
@@ -244,38 +243,7 @@ const EServices: FC = (): ReactElement => {
             />
           </div>
           
-          <div className="flex justify-center space-x-2 mt-4">
-            <button
-              onClick={() => filterByCategory('all')}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                activeTab === 'all' 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              All Services
-            </button>
-            <button
-              onClick={() => filterByCategory('main')}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                activeTab === 'main' 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              Main Services
-            </button>
-            <button
-              onClick={() => filterByCategory('e-service')}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                activeTab === 'e-service' 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              E-Services
-            </button>
-          </div>
+          {/* Filter controls removed to keep only six main services */}
         </div>
 
         {filteredServices.length === 0 ? (
@@ -284,7 +252,7 @@ const EServices: FC = (): ReactElement => {
           </div>
         ) : (
           <>
-            {activeTab !== 'e-service' && (
+            {true && (
               <div className="mb-16">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
                   Main Shipping Services
@@ -296,19 +264,7 @@ const EServices: FC = (): ReactElement => {
                 </div>
               </div>
             )}
-
-            {activeTab !== 'main' && (
-              <div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-                  E-Services
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredServices
-                    .filter(service => service.category === 'e-service')
-                    .map((service, index) => renderServiceCard(service, index))}
-                </div>
-              </div>
-            )}
+            {/* E-Services section removed */}
           </>
         )}
       </div>
