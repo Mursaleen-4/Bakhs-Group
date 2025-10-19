@@ -147,7 +147,7 @@ const News: React.FC = () => {
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
   >
-    <span className="text-blue-600">News & Blogs</span>
+    <span className="text-blue-600">News</span>
   </motion.h1>
   <div className="mt-2 h-1 w-24 bg-blue-600 mx-auto rounded-full"></div>
 

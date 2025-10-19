@@ -12,7 +12,7 @@ import {
   Clock,
   Globe
 } from 'lucide-react';
-import { pageBackgrounds } from '../assets/videos';
+// import { pageBackgrounds } from '../assets/videos';
 
 const Quote: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -119,7 +119,7 @@ const Quote: React.FC = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-blue-500"></div>
+        <div className="absolute inset-0 bg-gray-800"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <motion.div 

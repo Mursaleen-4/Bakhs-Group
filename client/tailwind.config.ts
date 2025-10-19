@@ -51,7 +51,7 @@ const config: Config = {
   text: '#E2E8F0', // light gray-blue for the main title — elegant & readable
   subtitle: 'black', // soft mint-teal accent for “Beyond Boundaries” etc.
   description: '#F8FAFC', // very light off-white for readability
-  cta: '#0EA5E9', // sky-blue button (contrasts the orange video background)
+  cta: 'Blue', // sky-blue button (contrasts the orange video background)
   ctaText: '#FFFFFF', // pure white text on CTA
   // statsBg: 'rgba(0, 0, 0, 0.45)', // dark translucent overlay for stats or text bg
           },
@@ -59,8 +59,8 @@ mixed: {
   text: '#E2E8F0', // light gray-blue for the main title — elegant & readable
   subtitle: '#A7F3D0', // soft mint-teal accent for “Beyond Boundaries” etc.
   description: '#F8FAFC', // very light off-white for readability
-  cta: '#0EA5E9', // sky-blue button (contrasts the orange video background)
-  ctaText: '#FFFFFF', // pure white text on CTA
+  cta: ' #FFFFFF', // sky-blue button (contrasts the orange video background)
+  ctaText: '#0EA5E9', // pure white text on CTA
   // statsBg: 'rgba(0, 0, 0, 0.45)', // dark translucent overlay for stats or text bg
  },
 

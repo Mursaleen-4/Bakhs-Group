@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {  Ship, Truck, ArrowRight,Anchor, Briefcase, Globe, Users, Target, BarChart2, Clock, Shield, Award } from 'lucide-react';
+import {  Ship, Truck, Calendar,ArrowRight,Anchor, Briefcase, Globe, Users, Target, BarChart2, Clock, Shield, Award } from 'lucide-react';
 
 
 const About: React.FC = () => {
@@ -46,12 +46,12 @@ const About: React.FC = () => {
         { icon: <Users className="w-5 h-5" />, title: "Client Focus", description: "Tailored solutions" },
         { icon: <Award className="w-5 h-5" />, title: "Integrity", description: "Trust and transparency" }
       ],
-      stats: [
-        { value: "$500M+", label: "Assets Under Management" },
-        { value: "50+", label: "Investment Projects" },
-        { value: "15+", label: "Years Experience" },
-        { value: "98%", label: "Client Retention" }
-      ]
+      // stats: [
+      //   { value: "$500M+", label: "Assets Under Management" },
+      //   { value: "50+", label: "Investment Projects" },
+      //   { value: "15+", label: "Years Experience" },
+      //   { value: "98%", label: "Client Retention" }
+      // ]
     },
     {
       id: 'yaaseen-shipping',
@@ -101,7 +101,7 @@ const About: React.FC = () => {
       id: 'uosl',
       name: "UOSL Shipping & Logistics",
       shortDescription: "End-to-end logistics solutions with a focus on efficiency and customer satisfaction.",
-      description: "UOSL Shipping & Logistics is a full-service logistics provider offering comprehensive supply chain solutions. From warehousing to last-mile delivery, we ensure seamless transportation of goods across global markets with maximum efficiency and reliability.",
+      description: "UOSL Shipping and Logicsctics (Pvt) Ltd , is a part of BAKSH group of companies, UOSL has established Off Dock Empty Container Park located at Karachi within city limit at well known location for customers at Maripur Truck Stand Hawks bay Road Karachi and around 6-7 km from Karachi Port, having a storage area of 8 acres land on which storage / operation commenced from 11th-April-2008 with back up area of another 4 acres for expansion on 2nd phase, depot having boundary wall.",
       icon: <Truck className="w-8 h-8 text-blue-600" />,
       link: "/uosl",
       year: 2018,
@@ -119,6 +119,17 @@ const About: React.FC = () => {
       //   { value: "99.9%", label: "Accuracy" }
       // ]
     }
+  ];
+    const milestones = [
+    { year: 1951, event: 'Established as United Oriental Steamship Co., offering liner services between East Pakistan and West Pakistan' },
+    { year: 1967, event: 'Baksh Investment Ltd incorporated, expanding into stevedoring, terminal handling, and lighterage operations' },
+    { year: 1981, event: 'Yaaseen Shipping Lines established to represent principals' },
+    { year: 1984, event: 'Appointed as agents for Orient Overseas Container Line (OOCL)' },
+    { year: 2006, event: 'Appointed as agents for STX Pan Ocean Co. Ltd. (now Pan Ocean)' },
+    { year: 2007, event: 'Appointed as agents for Maldives National Shipping' },
+    { year: 2007, event: 'A joint venture agreement with OOCL was formalized in pakistan' },
+    { year: 2007, event: 'Launched dedicated freight forwarding division under UOSL Shipping and Logistics Pvt Ltd' },
+    { year: "2008-2011", event: 'Established off-dock empty container depots in Karachi and Lahore Port' },
   ];
 
   // const toggleCompany = (companyId: string) => {
@@ -189,7 +200,7 @@ const About: React.FC = () => {
                 </Link>
               </motion.div>
 
-              <motion.div
+              {/* <motion.div
                 className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -211,7 +222,7 @@ const About: React.FC = () => {
                   <div className="text-2xl font-bold text-gray-900">24/7</div>
                   <div className="text-xs text-gray-500">Support</div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
         </div>
@@ -250,20 +261,50 @@ const About: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
+            {/* Logo */}
+
+               
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Group </h2>
+                                <img
+                            src="/images/baksh1.png"
+                            alt="Baksh Group Logo"
+                            className="h-12 w-auto mr-2"
+                  />
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    The Baksh Group is a leading conglomerate with a strong presence in maritime, logistics, and investment sectors. 
-                    With over 18 years of excellence, we've built a reputation for innovation, reliability, and sustainable growth 
-                    across all our business verticals.
+Established in 1951 as United Oriental Steamship Co., the company began by offering
+liner services between East Pakistan and West Pakistan, quickly rising to prominence as
+the largest ship-owning company in the country.
                   </p>
+                   <p className="text-gray-600 mb-6 leading-relaxed">
+                     In 1967, Baksh Investment Ltd was incorporated to expand and diversify business
+operations which included stevedoring, terminal handling, and lighterage operations.
+The company became contractors for stevedoring and lighterage for prominent
+organizations such as Pakistan National Shipping Corporation (PNSC).
+
+                   </p>
+                   <p className="text-gray-600 mb-6 leading-relaxed">
+                     In 1981, Yaaseen
+Shipping Lines was established to represent principals, and by early 1984, the company
+was appointed as agents for Orient Overseas Container Line (OOCL).In 2006, the company was appointed as agents for STX Pan Ocean Co. Ltd. (now Pan
+Ocean), followed by an appointment in 2007 as agents for Maldives National Shipping.
+That same year, a joint venture agreement with OOCL was formalized in Pakistan in
+accordance with OOCL’s global JV policy
+                   </p>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    In 2007, a dedicated freight forwarding
+division was launched under UOSL Shipping and Logistics Pvt Ltd, offering customized
+logistics solutions to domestic and regional clients.
+Between 2008 and 2011, two off-dock empty container depots under UOSL were
+established in Karachi and Lahore Port, serving key clients.
+                   </p>
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     Our group companies work in synergy to deliver end-to-end solutions, from maritime transport and logistics 
                     to strategic investments and financial services. We operate across multiple countries with a team of dedicated 
                     professionals committed to excellence.
                   </p>
-                  <div className="grid grid-cols-2 gap-4 mt-8">
+                  {/* <div className="grid grid-cols-2 gap-4 mt-8">
                     <div className="bg-gray-800 p-4 rounded-lg">
                       <div className="text-2xl font-bold text-white">70+</div>
                       <div className="text-sm text-gray-300">Years Experience</div>
@@ -280,7 +321,7 @@ const About: React.FC = () => {
                       <div className="text-2xl font-bold text-white">Many</div>
                       <div className="text-sm text-gray-300">Vessels</div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
                   <img 
@@ -406,6 +447,7 @@ const About: React.FC = () => {
               </div>
             </section> */}
 
+
 {/* Our Mission & Vision */}
 <section
   className="relative py-16 text-white bg-center bg-cover bg-no-repeat"
@@ -435,17 +477,15 @@ const About: React.FC = () => {
         <div className="flex items-center gap-3 mb-5">
           <div className="p-3 bg-blue-500/30 rounded-xl group-hover:bg-blue-500/50 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7H7v6h6V7z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 13l10 10 4-4-10-10H7z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <h3 className="text-2xl font-semibold text-white">Our Mission</h3>
         </div>
         <p className="text-white-200 leading-relaxed">
-          To deliver exceptional value to our customers through innovative maritime and logistics
-          solutions, maintaining the highest standards of safety, efficiency, and environmental responsibility.
+          Our ambition is to be recognized as the leading name in the industry with
+          the drive to meet customer objectives efficiently and effectively
         </p>
-
         {/* Accent Line */}
         <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-tr-2xl transition-all duration-500"></div>
       </div>
@@ -455,14 +495,15 @@ const About: React.FC = () => {
         <div className="flex items-center gap-3 mb-5">
           <div className="p-3 bg-blue-500/30 rounded-xl group-hover:bg-blue-500/50 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
             </svg>
           </div>
           <h3 className="text-2xl font-semibold text-white">Our Vision</h3>
         </div>
         <p className="text-white-200 leading-relaxed">
-          To be the most trusted and innovative maritime and logistics group, setting industry benchmarks
-          and creating sustainable value for all our stakeholders.
+Our vision is to provide Professional and dedicated quality service to all our
+Customers, Principals and stakeholders.
         </p>
 
         {/* Accent Line */}
@@ -476,6 +517,49 @@ const About: React.FC = () => {
     </div>
   </div>
 </section>
+
+      {/* Company History */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Journey Through Time</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From humble beginnings in 1951 to becoming a leading maritime services provider in Pakistan and beyond.
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-primary-200"></div>
+            {milestones.map((milestone, index) => (
+              <motion.div
+                key={milestone.year}
+                className={`relative flex items-center ${
+                  index % 2 === 0 ? 'justify-start' : 'justify-end'
+                } mb-8`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+              >
+                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                  <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <div className="flex items-center mb-3">
+                      <Calendar className="w-5 h-5 text-primary-600 mr-2" />
+                      <span className="text-2xl font-bold text-primary-600">{milestone.year}</span>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">{milestone.event}</p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
             {/* Our Values */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Core Values</h2>
@@ -597,7 +681,30 @@ const About: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">{company.name} </h2>
+                    <div className="flex items-center mb-6">
+                      {company.id === 'baksh-investment' && (
+                        <img
+                          src="/images/bakhs_limited.jpg"
+                          alt="Baksh Investment Limited Logo"
+                          className="h-12 w-auto mr-4"
+                        />
+                      )}
+                      {(company.id === 'yaaseen-shipping' || company.id === 'yaaseen-pvt') && (
+                        <img
+                          src="/images/yaseen_logo.png"
+                          alt={`${company.name} Logo`}
+                          className="h-12 w-auto mr-4"
+                        />
+                      )}
+                      {company.id === 'uosl' && (
+                        <img
+                          src="/images/uosl_logo.jpg"
+                          alt="UOSL Logo"
+                          className="h-12 w-auto mr-4"
+                        />
+                      )}
+                      <h2 className="text-3xl font-bold text-gray-900">{company.name}</h2>
+                    </div>
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
                         <p className="text-gray-600 mb-6 leading-relaxed">
@@ -607,13 +714,16 @@ const About: React.FC = () => {
                           {company.id === 'baksh-investment' && "With over 15 years of experience in maritime investments, we have built a reputation for identifying and nurturing high-potential opportunities in the shipping and logistics sectors. Our strategic approach and deep industry knowledge enable us to deliver exceptional returns for our clients. We specialize in portfolio management, risk assessment, and strategic financial planning to help our clients achieve their investment goals in the maritime industry."}
                           {company.id === 'yaaseen-shipping' && "Operating with a modern fleet and extensive global network, we provide reliable and efficient sea transportation services across international waters. Our commitment to safety, innovation, and customer satisfaction has made us a trusted partner in the maritime industry. We handle container shipping, bulk cargo, and specialized transport with state-of-the-art vessels and experienced crews ensuring timely and secure delivery of goods worldwide."}
                           {company.id === 'yaaseen-pvt' && "Our specialized approach to shipping and logistics solutions ensures that every client receives tailored services that meet their specific requirements. We excel in container shipping, bulk cargo handling, and specialized transport services with unmatched efficiency. Our team of logistics experts works closely with clients to develop customized solutions that optimize supply chain performance and reduce operational costs while maintaining the highest standards of service delivery."}
-                          {company.id === 'uosl' && "As a full-service logistics provider, we offer comprehensive supply chain solutions from warehousing to last-mile delivery. Our advanced technology and experienced team ensure seamless transportation of goods across global markets with maximum efficiency and reliability. We provide end-to-end logistics services including freight forwarding, customs clearance, inventory management, and distribution services to help businesses streamline their operations and reach new markets effectively."}
+                          {company.id === 'uosl' && "UOSL has also established Empty Container Terminal at Lahore located at well known location for customers at 22 km main Multan road( where all the container terminals located ) near dry ports and industrial area, UOSL Lahore has an area of 3 acres land on which storage / operation commenced from 7th-May-2011 with all below mentioned facilities also we have back up area of another 4 acres for expansion on 2nd phase"}
                         </p>
                         <p className="text-gray-600 mb-6 leading-relaxed">
                           {company.id === 'baksh-investment' && "Our investment philosophy centers on long-term value creation through careful analysis of market trends and emerging opportunities in the maritime sector. We leverage our deep industry expertise to identify undervalued assets and growth potential, providing our clients with diversified investment portfolios that deliver consistent returns while managing risk effectively."}
                           {company.id === 'yaaseen-shipping' && "With our comprehensive fleet management system and strategic partnerships across major shipping routes, we ensure optimal vessel utilization and route efficiency. Our advanced tracking technology and real-time monitoring systems provide complete visibility throughout the shipping process, giving our clients peace of mind and enabling them to make informed decisions about their cargo movements."}
                           {company.id === 'yaaseen-pvt' && "We understand that each client has unique shipping requirements and challenges. Our flexible service offerings include charter services, project cargo handling, and specialized equipment for sensitive or oversized shipments. Our commitment to continuous improvement and investment in modern infrastructure ensures we remain at the forefront of the shipping industry."}
-                          {company.id === 'uosl' && "Our integrated logistics platform combines advanced technology with personalized service to deliver exceptional results. We offer flexible solutions that scale with our clients' business needs, from small package delivery to large-scale freight operations. Our team of logistics professionals is dedicated to exceeding expectations and building lasting partnerships with our clients."}
+                          {company.id === 'uosl' && "Our Empty Container Park is fully equipped with all the necessary requisites of the commercial infrastructures, i.e. experienced, efficient and professional key personnels, fully automated and computerized operation systems providing timely reports / documentation, including electronic data inter-change (EDI) facilities and competent office / field operation staff."}
+                        </p>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                          {company.id === 'uosl' && "Our philosophy is based on providing services to Customers satisfaction, with the aim to serve our Customers in a friendly, professional environment, providing empty container storage / handling and providing complete information / real time reporting to our Customersin respect of all their containers handled by us"}
                         </p>
                         {/* <div className="grid grid-cols-2 gap-4 mt-8">
                           {company.stats.slice(0, 4).map((stat, i) => (
@@ -638,7 +748,7 @@ const About: React.FC = () => {
                     </div>
                   </motion.section>
 
-                  {/* Company Values */}
+                  {/* Company Values
                   <div className="mb-12">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Values</h2>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -659,9 +769,9 @@ const About: React.FC = () => {
                         </motion.div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
-                  {/* Company Services */}
+                  {/* Company Services
                   <div className="mb-12">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Services</h2>
                     <div className="grid md:grid-cols-2 gap-6">
@@ -696,7 +806,7 @@ const About: React.FC = () => {
                         </motion.div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* CTA Section
                   <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-8 text-white">

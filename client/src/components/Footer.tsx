@@ -2,15 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Ship, 
+  // Ship, 
   MapPin, 
   Phone, 
   Mail, 
   Clock,
-  Globe,
-  Container,
-  Anchor,
-  FileText,
+  // Globe,
+  // Container,
+  // Anchor,
+  // FileText,
   ChevronRight
 } from 'lucide-react';
 
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
+    // { name: 'Services', href: '/services' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Blogs', href: '/blogs' },
@@ -47,12 +47,14 @@ const Footer: React.FC = () => {
   ];
 
   const services = [
-    { name: 'Liner Shipping', href: '/services/1', icon: Ship },
-    { name: 'Freight Forwarding', href: '/services/2', icon: Globe },
-    { name: 'Container Services', href: '/services/3', icon: Container },
-    { name: 'Ship Husbandry', href: '/services/4', icon: Anchor },
-    { name: 'WareHousing', href: '/services/5', icon: FileText },
-    { name: 'Customs Clearance', href: '/services/6', icon: FileText }
+    { name: 'Liner Agency', href: '/services/1'},
+    { name: 'Freight Forwarding', href: '/services/2'},
+    { name: 'Transportation', href: '/services/3' },
+    { name: 'Deport Services', href: '/services/4' },
+    { name: 'Ship Husbandry', href: '/services/5' },
+    { name: 'Chartering and Stevedoring', href: '/services/6' },
+    { name: 'Project Cargo Handling', href: '/services/7' },
+    { name: 'NVOCC', href: '/services/8' }
   ];
 
   // const eServices = [
@@ -76,25 +78,25 @@ const Footer: React.FC = () => {
   const offices = [
     {
       city: 'Karachi',
-      address: '10th Floor, Sheikh Sultan Trust Bldg, Beaumont Road',
+      address: '10th Floor, Sheikh Sultan Trust Bldg, Beaumont Road,Karachi',
       phone: '+92-21-35688057-59',
       email: 'info@yslpk.com'
     },
     {
       city: 'Lahore',
-      address: 'Grand Square Mall, Office no E9C/2, 9th Floor, Gulberg III',
+      address: 'Grand Square Mall, Office no E9C/2, 9th Floor, Gulberg III,Lahore',
       phone: '+92-42-35764134',
       email: 'lahore@yslpk.com'
     },
     {
       city: 'Multan',
-      address: '21 U Business City Plaza',
+      address: '21 U Business City Plaza,Multan',
       phone: '+92-61-6223356',
       email: 'multan@yslpk.com'
     },
     {
       city: 'Faisalabad',
-      address: '22, Chenab Market',
+      address: '22, Chenab Market,Faisalabad',
       phone: '+92-41-8532256',
       email: 'faisalabad@yslpk.com'
     }
@@ -217,14 +219,14 @@ const Footer: React.FC = () => {
                 <h3 className="text-lg font-bold text-white mb-6">Our Services</h3>
                 <ul className="space-y-3">
                   {services.map((service) => {
-                    const Icon = service.icon;
+                    // const Icon = service.icon;
                     return (
                       <li key={service.name}>
                         <Link
                           to={service.href}
                           className="flex items-center text-gray-300 hover:text-primary-400 transition-colors group"
                         >
-                          <Icon className="w-4 h-4 mr-3 text-primary-400" />
+                          {/* <Icon className="w-4 h-4 mr-3 text-primary-400" /> */}
                           {service.name}
                         </Link>
                       </li>
@@ -360,17 +362,17 @@ const Footer: React.FC = () => {
                 transition={{ duration: 0.8, delay: 1 }}
               >
                 <p>
-                  &copy; {currentYear} Bakhs Group . All rights reserved.
+                  &copy; {currentYear} Baksh Group . All rights reserved.
                 </p>
               </motion.div>
               
-              <motion.div
+              {/* <motion.div
                 className="flex flex-wrap items-center space-x-6 text-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
               >
-                {/* <a href="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors">
                   Privacy Policy
                 </a>
                 <a href="/terms" className="text-gray-400 hover:text-primary-400 transition-colors">
@@ -378,13 +380,13 @@ const Footer: React.FC = () => {
                 </a>
                 <a href="/sitemap" className="text-gray-400 hover:text-primary-400 transition-colors">
                   Sitemap
-                </a> */}
-                {/* <span className="text-gray-400">|</span> */}
+                </a>
+                <span className="text-gray-400">|</span>
                 <div className="flex items-center text-gray-400">
                   <Globe className="w-4 h-4 mr-1" />
                   <span>Pakistan</span>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
             
           </div>

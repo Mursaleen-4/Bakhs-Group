@@ -88,34 +88,34 @@ const Navigation: React.FC = () => {
                     className="absolute mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-100 z-50"
                   >
                     <DropdownLink
-                      to="/baksh-group"
+                      to="/about"
                       title="Baksh Group"   
-                      desc="Financial Services"
-                      img="/images/Bakhs_group.jpg"
+                      // desc="Financial Services"
+                      // img="/images/Bakhs_group.jpg"
                     />
                     <DropdownLink
-                      to="/baksh-investment"
+                      to="/about"
                       title="Baksh Investment Limited"
-                      desc="Financial Services"
-                      img="/images/bakhs_limited.jpg"
+                      // desc="Financial Services"
+                      // img="/images/bakhs_limited.jpg"
                     />
                     <DropdownLink
-                      to="/yaaseen-about"
+                      to="/about"
                       title="Yaaseen Shipping Lines"
-                      desc="Global Shipping"
-                      img="/images/yaseen_logo.png"
+                      // desc="Global Shipping"
+                      // img="/images/yaseen_logo.png"
                     />
                     <DropdownLink
-                      to="/yaaseen-shipping-pvt"
+                      to="/about"
                       title="Yaaseen Shipping Lines (PVT) Ltd"
-                      desc="Global Shipping"
-                      img="/images/yaseen_logo.png"
+                      // desc="Global Shipping"
+                      // img="/images/yaseen_logo.png"
                     />
                     <DropdownLink
-                      to="/uosl"
+                      to="/about"
                       title="UOSL Shipping & Logistics"
-                      desc="End-to-end logistics"
-                      img="/images/uosl_logo.jpg"
+                      // // desc="End-to-end logistics"
+                      // img="/images/uosl_logo.jpg"
                     />
                   </motion.div>
                 )}
@@ -310,22 +310,22 @@ const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) =>
 const DropdownLink = ({
   to,
   title,
-  desc,
-  img,
+  // desc,
+  // img,
 }: {
   to: string;
   title: string;
-  desc: string;
-  img: string;
+  // desc: string;
+  // img: string;
 }) => (
   <Link
     to={to}
     className="flex items-center px-4 py-3 hover:bg-blue-50 transition"
   >
-    <img src={img} alt={title} className="w-8 h-8 rounded-md mr-3" />
+    {/* <img src={img} alt={title} className="w-8 h-8 rounded-md mr-3" /> */}
     <div className="flex-1">
       <div className="font-medium">{title}</div>
-      <div className="text-xs text-gray-500">{desc}</div>
+      {/* <div className="text-xs text-gray-500">{desc}</div> */}
     </div>
     <ChevronRight className="w-4 h-4 text-gray-400" />
   </Link>

@@ -8,21 +8,21 @@ const SocialMedia: React.FC = () => {
       name: 'Facebook',
       icon: Facebook,
       url: 'https://facebook.com/yaaseenshippinglines',
-      color: 'bg-blue-600 hover:bg-blue-700',
+      color: 'bg-blue-600 hover:bg-blue-600',
       description: 'Follow us for daily updates and company news'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
       url: 'https://linkedin.com/company/yaaseen-shipping-lines',
-      color: 'bg-blue-700 hover:bg-blue-800',
+      color: 'bg-blue-700 hover:bg-blue-600',
       description: 'Connect with us professionally'
     },
         {
       name: 'Instagram',
       icon: Instagram,
       url: 'https://instagram.com/yaaseenshippinglines',
-      color: 'bg-blue-700 hover:bg-blue-800',
+      color: 'bg-blue-700 hover:bg-blue-600',
       description: 'Enteract with us on Instagram'
     }
   ];
@@ -56,7 +56,7 @@ const SocialMedia: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl lg:text-3xl font-bold text-blue-800 mb-2">
+          <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-2">
             GET SOCIAL WITH US
           </h2>
           

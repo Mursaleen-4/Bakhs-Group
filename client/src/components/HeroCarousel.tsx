@@ -35,8 +35,8 @@ const HeroCarousel: React.FC = () => {
       description:
         'Connecting continents with reliable and efficient maritime solutions. Experience seamless global trade with our comprehensive services.',
       image: '',
-      cta: 'Explore Services',
-      ctaLink: '/services',
+      cta: 'Get Quote',
+      ctaLink: '/quote',
       icon: Globe,
       stats: [
         { value: '24/7', label: 'Support' },
@@ -51,8 +51,8 @@ const HeroCarousel: React.FC = () => {
       description:
         'Cutting-edge logistics services designed to meet the demands of modern global trade. Fast, secure, and efficient delivery solutions.',
       image: '',
-      cta: 'Get a Quote',
-      ctaLink: '/quote',
+      cta: 'Vessel Schedule',
+      ctaLink: '/schedule',
       icon: Truck,
       stats: [
         { value: 'Fast', label: 'Delivery' },
@@ -67,7 +67,7 @@ const HeroCarousel: React.FC = () => {
       description:
         'With years of experience in the industry, we deliver exceptional maritime services with a commitment to quality and customer satisfaction.',
       image: '',
-      cta: 'Our Story',
+      cta: 'About Us',
       ctaLink: '/about',
       icon: Award,
       stats: [
@@ -342,15 +342,10 @@ const HeroCarousel: React.FC = () => {
                       <a
                         href={currentSlideData.ctaLink}
                         className={`px-8 py-4 font-bold rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 ${
-                          currentSlide === 0 ? 'bg-white hover:bg-gray-100 text-blue-900' :
-                          currentSlide === 1 ? 'bg-blue-600 hover:bg-blue-700 text-white' :
-                          'bg-white hover:bg-gray-100 text-red-900'
+                          currentSlide === 0 ? 'bg-video-dark-cta hover:bg-opacity-90 text-video-dark-ctaText' :
+                          currentSlide === 1 ? 'bg-video-mixed-cta hover:bg-opacity-90 text-video-mixed-ctaText' :
+                          'bg-video-light-cta hover:bg-opacity-90 text-video-light-ctaText'
                         }`}
-                        style={{
-                          color: currentSlide === 0 ? 'rgb(59 130 246)' :
-                            currentSlide === 1 ? 'rgb(255 255 255)' :
-                            'rgb(239 68 68)'
-                        }}
                       >
                         {currentSlideData.cta}
                         <ChevronRight className="w-5 h-5" />
@@ -358,15 +353,10 @@ const HeroCarousel: React.FC = () => {
                       <a
                         href="/contact"
                         className={`px-6 py-3.5 border-2 font-medium rounded-lg flex items-center justify-center gap-2 transition-all duration-300 ${
-                          currentSlide === 0 ? 'border-white hover:border-blue-200 text-white hover:bg-white/10' :
-                          currentSlide === 1 ? 'border-white hover:border-blue-300 text-white hover:bg-white/10' :
-                          'border-white hover:border-red-200 text-white hover:bg-white/10'
+                          currentSlide === 0 ? 'border-video-dark-text text-video-dark-text hover:bg-video-dark-cta/10' :
+                          currentSlide === 1 ? 'border-video-mixed-text text-video-mixed-text hover:bg-video-mixed-cta/10' :
+                          'border-video-light-text text-video-light-text hover:bg-video-light-cta/10'
                         }`}
-                        style={{
-                          color: currentSlide === 0 ? 'rgb(255 255 255)' :
-                            currentSlide === 1 ? 'rgb(255 255 255)' :
-                            'rgb(255 255 255)'
-                        }}
                       >
                         Contact Us
                       </a>

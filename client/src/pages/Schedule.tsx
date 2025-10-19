@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Ship, Clock, MapPin, Calendar } from 'lucide-react';
-import { pageBackgrounds } from '../assets/videos';
+// import { pageBackgrounds } from '../assets/videos';
 
 interface Voyage {
   id: number;
