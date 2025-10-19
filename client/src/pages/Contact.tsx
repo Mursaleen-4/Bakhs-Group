@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
       phone: '+92-21-35688057-59, 35693004, 6, 7',
       fax: '+92-21-35683051, 35687367',
       email: 'info@yslpk.com',
-      hours: 'Monday - Saturday: 9:00 AM - 6:00 PM',
+      hours: 'Monday - Saturday: 9:00 AM - 5:00 PM',
       coordinates: { lat: 24.8607, lng: 67.0011 }
     },
     {
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
       address: 'Grand Square Mall, Office no E9C/2, 9th Floor, Gulberg III Lahore',
       phone: '+92-42-35764134-5, 35772049',
       email: 'lahore@yslpk.com',
-      hours: 'Monday - Saturday: 9:00 AM - 6:00 PM',
+      hours: 'Monday - Saturday: 9:00 AM - 5:00 PM',
       coordinates: { lat: 31.5204, lng: 74.3587 }
     },
     {
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
       address: '21 U Business City Plaza Bosan Road Multan',
       phone: '+92-61-6223356, 6223357',
       email: 'multan@yslpk.com',
-      hours: 'Monday - Saturday: 9:00 AM - 6:00 PM',
+      hours: 'Monday - Saturday: 9:00 AM - 5:00 PM',
       coordinates: { lat: 30.1575, lng: 71.5249 }
     },
     {
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
       address: '22, Chenab Market, Madina Town, Faisalabad, Pakistan',
       phone: '+92-41-8532256-7',
       email: 'faisalabad@yslpk.com',
-      hours: 'Monday - Saturday: 9:00 AM - 6:00 PM',
+      hours: 'Monday - Saturday: 9:00 AM - 5:00 PM',
       coordinates: { lat: 31.4504, lng: 73.1350 }
     }
   ];
@@ -124,10 +124,16 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <section className="relative text-white py-16 overflow-hidden bg-gray-500">
-        <div className="absolute inset-0 bg-gray-500"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32" />
+      <section className="relative text-white py-16 overflow-hidden" style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1505839673365-e3971f8d9184?auto=format&fit=crop&w=1600&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gray-900/70"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48 backdrop-blur-sm" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32 backdrop-blur-sm" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -142,7 +148,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Get in touch with our maritime experts across Pakistan. We're here to help with all your shipping and logistics needs.
             </p>
             

@@ -318,22 +318,43 @@ established in Karachi and Lahore Port, serving key clients.
                       <div className="text-sm text-gray-300">Employees</div>
                     </div>
                     <div className="bg-gray-800 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-white">Many</div>
-                      <div className="text-sm text-gray-300">Vessels</div>
-                    </div>
-                  </div> */}
-                </div>
-                <div className="bg-gray-100 rounded-lg overflow-hidden">
+                  </div>
+                  <div className="bg-gray-800 p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-white">Multiple</div>
+                    <div className="text-sm text-gray-300">Countries</div>
+                  </div>
+                  <div className="bg-gray-800 p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-white">Experienced</div>
+                    <div className="text-sm text-gray-300">Employees</div>
+                  </div>
+                  <div className="bg-gray-800 p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-white">Many</div>
+                    <div className="text-sm text-gray-300">Vessels</div>
+                  </div>
+                </div> */}
+              </div>
+              <div className="grid grid-rows-2 gap-4 h-full w-full">
+                <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
                   <img 
-                    src="/images/group.jpg" 
+                    src="/images/1.jpg" 
                     alt="Baksh Group Operations" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
+                  <img 
+                    src="/images/2.jpg" 
+                    alt="Baksh Group Team" 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               </div>
-            </motion.section>
+            </div>
+          </motion.section>
 
+          {/* { Our Companies }
             {/* { Our Companies }
+{{ ... }
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Companies</h2>
               <div className="space-y-4">
@@ -453,7 +474,8 @@ established in Karachi and Lahore Port, serving key clients.
   className="relative py-16 text-white bg-center bg-cover bg-no-repeat"
   style={{
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1505839673365-e3971f8d9184?auto=format&fit=crop&w=1600&q=80')",
+      "url('/images/mission.jpg')"
+      
   }}
 >
   {/* Overlay */}
@@ -463,17 +485,17 @@ established in Karachi and Lahore Port, serving key clients.
     {/* Header */}
     <div className="text-center mb-12">
       <h2 className="text-4xl font-extrabold tracking-tight mb-4 text-white">
-        Our Mission & Vision
+       
       </h2>
-      <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
+      {/* <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
         Guiding our journey with innovation, integrity, and impact in every wave we sail.
-      </p>
+      </p> */}
     </div>
 
     {/* Cards */}
     <div className="grid md:grid-cols-2 gap-8">
       {/* Mission */}
-      <div className="group relative bg-white/10 hover:bg-white/15 transition-all duration-500 rounded-2xl shadow-2xl p-8 backdrop-blur-lg border border-white/10 hover:-translate-y-1">
+      <div className="group relative bg-white/10 hover:bg-white/15 transition-all duration-500 rounded-2xl shadow-2xl p-8 border border-white/10 hover:-translate-y-1">
         <div className="flex items-center gap-3 mb-5">
           <div className="p-3 bg-blue-500/30 rounded-xl group-hover:bg-blue-500/50 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -491,7 +513,7 @@ established in Karachi and Lahore Port, serving key clients.
       </div>
 
       {/* Vision */}
-      <div className="group relative bg-white/10 hover:bg-white/15 transition-all duration-500 rounded-2xl shadow-2xl p-8 backdrop-blur-lg border border-white/10 hover:-translate-y-1">
+      <div className="group relative bg-white/10 hover:bg-white/15 transition-all duration-500 rounded-2xl shadow-2xl p-8  border border-white/10 hover:-translate-y-1">
         <div className="flex items-center gap-3 mb-5">
           <div className="p-3 bg-blue-500/30 rounded-xl group-hover:bg-blue-500/50 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

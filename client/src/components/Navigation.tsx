@@ -101,7 +101,7 @@ const Navigation: React.FC = () => {
                     />
                     <DropdownLink
                       to="/about"
-                      title="Yaaseen Shipping Lines"
+                      title="Yaaseen Newss"
                       // desc="Global Shipping"
                       // img="/images/yaseen_logo.png"
                     />

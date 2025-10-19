@@ -160,7 +160,7 @@ const Home: React.FC = () => {
                     <div className="h-64 md:h-80 lg:h-auto lg:min-h-[300px]">
                       <div 
                         className="h-full w-full bg-cover bg-center"
-                        style={{ backgroundImage: 'url(/images/group.jpg)' }}
+                        style={{ backgroundImage: 'url(/images/blala.jpg)' }}
                       />
                     </div>
                   </div>
