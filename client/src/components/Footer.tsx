@@ -146,16 +146,16 @@ const Footer: React.FC = () => {
                 <div className="text-2xl font-bold text-white">Baksh Group</div>
                 {/* <div className="text-sm text-gray-400">United Oriental Steamship Co.</div> */}
               </div>
-              
+{/*               
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Since 1951, we've been Pakistan's leading maritime service provider, 
                 connecting businesses to global trade routes with professionalism and excellence.
-              </p>
+              </p> */}
               
               <div className="space-y-3">
                 <div className="flex items-center text-gray-300">
                   <Clock className="w-4 h-4 mr-3 text-primary-400" />
-                  <span className="text-sm">Mon-Sat: 9:00 AM - 6:00 PM</span>
+                  <span className="text-sm">Mon-Sat: 9:00 AM - 5:00 PM</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Phone className="w-4 h-4 mr-3 text-primary-400" />

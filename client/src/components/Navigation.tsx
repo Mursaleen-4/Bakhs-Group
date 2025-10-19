@@ -128,9 +128,13 @@ const Navigation: React.FC = () => {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-  <a
-    href="/services"
-    className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 flex items-center"
+  <button
+    onClick={(e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsServicesOpen(!isServicesOpen);
+    }}
+    className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 flex items-center bg-transparent border-none cursor-pointer"
   >
     SERVICES
     <ChevronDown
@@ -138,7 +142,7 @@ const Navigation: React.FC = () => {
         isServicesOpen ? "rotate-180" : ""
       }`}
     />
-  </a>
+  </button>
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
@@ -148,12 +152,14 @@ const Navigation: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     className="absolute mt-2 w-60 bg-white rounded-xl shadow-xl border border-gray-100 z-50"
                   >
-                    <DropdownItem to="/services/1" label="Liner Shipping" />
+                    <DropdownItem to="/services/1" label="Liner Agency" />
                     <DropdownItem to="/services/2" label="Freight Forwarding" />
-                    <DropdownItem to="/services/3" label="Container Services" />
-                    <DropdownItem to="/services/4" label="Ship Husbandry" />
-                    <DropdownItem to="/services/5" label="Warehousing" />
-                    <DropdownItem to="/services/6" label="Customs Clearance" />
+                    <DropdownItem to="/services/3" label="Transportation" />
+                    <DropdownItem to="/services/4" label="Deport Service" />
+                    <DropdownItem to="/services/5" label="Ship Husbandry" />
+                    <DropdownItem to="/services/6" label="Chartering and Stevedoring" />
+                    <DropdownItem to="/services/7" label="Project Cargo Handling" />
+                    <DropdownItem to="/services/8" label="NVOCC" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -162,8 +168,8 @@ const Navigation: React.FC = () => {
             <NavLink to="/gallery">
               <Image className="w-4 h-4 mr-1" /> GALLERY
             </NavLink>
-            <NavLink to="/blogs">
-              <Newspaper className="w-4 h-4 mr-1" /> BLOGS
+            <NavLink to="/News">
+              <Newspaper className="w-4 h-4 mr-1" /> News
             </NavLink>
             <NavLink to="/tariffs">TARIFFS</NavLink>
             <NavLink to="/contact">CONTACT</NavLink>
@@ -204,8 +210,6 @@ const Navigation: React.FC = () => {
             <div className="px-4 py-4 space-y-2">
               <MobileLink to="/" label="Home" />
               <MobileLink to="/about" label="About" />
-              <MobileLink to="/gallery" label="Gallery" icon={<Image />} />
-              <MobileLink to="/blogs" label="Blogs" icon={<Newspaper />} />
 
               {/* Mobile Companies */}
               <button
@@ -273,7 +277,8 @@ const Navigation: React.FC = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-
+              <MobileLink to="/gallery" label="Gallery" icon={<Image />} />
+              <MobileLink to="/news" label="News" icon={<Newspaper />} />
               <MobileLink to="/tariffs" label="Tariffs" />
               <MobileLink to="/schedule" label="Vessel Schedule" />
               <MobileLink to="/contact" label="Contact" />

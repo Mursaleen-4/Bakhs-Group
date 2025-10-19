@@ -30,8 +30,8 @@ const HeroCarousel: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      title: 'Global Maritime Excellence',
-      subtitle: 'Your Trusted Shipping Partner',
+      title: 'Your Reliable Partner',
+      subtitle: 'Your Gateway to Global Success',
       description:
         'Connecting continents with reliable and efficient maritime solutions. Experience seamless global trade with our comprehensive services.',
       image: '',
@@ -63,7 +63,7 @@ const HeroCarousel: React.FC = () => {
     {
       id: 3,
       title: 'Decades of Excellence',
-      subtitle: 'Proven Track Record',
+      subtitle: 'Where Every Mile Builds Trust',
       description:
         'With years of experience in the industry, we deliver exceptional maritime services with a commitment to quality and customer satisfaction.',
       image: '',
@@ -285,9 +285,9 @@ const HeroCarousel: React.FC = () => {
                   >
                     <motion.div 
                       className={`inline-flex items-center mb-6 px-6 py-2 rounded-full font-medium text-sm md:text-base shadow-md ${
-                        currentSlide === 0 ? 'bg-white/90 text-blue-900 border border-white/30' :
-                        currentSlide === 1 ? 'bg-blue-900/90 text-white border border-blue-300/30' :
-                        'bg-white/95 text-red-900 border border-white/30'
+                        currentSlide === 0 ? 'bg-white/90 text-video-dark-subtitle border border-white/30' :
+                        currentSlide === 1 ? 'bg-blue-900/90 text-video-mixed-subtitle border border-blue-300/30' :
+                        'bg-white/95 text-video-light-subtitle border border-white/30'
                       }`}
                       initial={{ opacity: 0, y: prefersReducedMotionRef.current ? 0 : -20 }}
                       animate={{ 
@@ -302,9 +302,9 @@ const HeroCarousel: React.FC = () => {
                     
                     <motion.h1 
                       className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight ${
-                        currentSlide === 0 ? 'text-white' :
-                        currentSlide === 1 ? 'text-white' :
-                        'text-white'
+                        currentSlide === 0 ? 'text-video-dark-text' :
+                        currentSlide === 1 ? 'text-video-mixed-text' :
+                        'text-video-light-text'
                       }`}
                       style={{
                         textShadow: '0 2px 4px rgba(0,0,0,0.7)'
@@ -316,16 +316,16 @@ const HeroCarousel: React.FC = () => {
                     </motion.h1>
                     
                     <motion.p 
-                      className={`text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed max-w-2xl ${
-                        currentSlide === 0 ? 'text-gray-100' :
-                        currentSlide === 1 ? 'text-gray-100' :
-                        'text-gray-100'
+                      className={`text-lg md:text-xl mb-8 max-w-2xl ${
+                        currentSlide === 0 ? 'text-video-dark-description' : 
+                        currentSlide === 1 ? 'text-video-mixed-description' : 'text-video-light-description'
                       }`}
-                      style={{
-                        textShadow: '0 1px 3px rgba(0,0,0,0.8)'
+                      initial={{ opacity: 0, y: prefersReducedMotionRef.current ? 0 : 20 }}
+                      animate={{ 
+                        opacity: 1, 
+                        y: 0, 
+                        transition: { delay: prefersReducedMotionRef.current ? 0 : 0.8, duration: prefersReducedMotionRef.current ? 0.2 : 0.6 } 
                       }}
-                      initial={{ opacity: 0, y: prefersReducedMotionRef.current ? 0 : 10 }}
-                      animate={{ opacity: 1, y: 0, transition: { delay: prefersReducedMotionRef.current ? 0 : 0.5, duration: prefersReducedMotionRef.current ? 0.2 : 0.5 } }}
                     >
                       {currentSlideData.description}
                     </motion.p>
@@ -430,7 +430,7 @@ const HeroCarousel: React.FC = () => {
       </motion.div>
 
       {/* Scroll Down Indicator */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-8 right-8 z-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ 
@@ -456,7 +456,7 @@ const HeroCarousel: React.FC = () => {
             />
           </div>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

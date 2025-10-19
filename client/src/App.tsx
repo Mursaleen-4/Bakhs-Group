@@ -17,12 +17,12 @@ const BakshGroup = React.lazy(() => import('./pages/BakshGroup'));
 const YaaseenShippingPVT = React.lazy(() => import('./pages/YaaseenShippingPVT'));
 const UOSL = React.lazy(() => import('./pages/UOSL'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const EServices = React.lazy(() => import('./pages/EServices'));
+// const EServices = React.lazy(() => import('./pages/EServices'));
 const EServiceDetail = React.lazy(() => import('./pages/EServiceDetail'));
 const Tariffs = React.lazy(() => import('./pages/Tariffs'));
 const Schedule = React.lazy(() => import('./pages/Schedule'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
-const Blogs = React.lazy(() => import('./pages/Blogs'));
+const News = React.lazy(() => import('./pages/News'));
 const Login = React.lazy(() => import('./pages/Login'));
 
 const PageLoader: React.FC = () => (
@@ -170,11 +170,11 @@ function App() {
                   }
                 />
                 <Route
-                  path="/blogs"
+                  path="/News"
                   element={
                     <Layout>
                       <AnimatedRoute>
-                        <Blogs />
+                        <News />
                       </AnimatedRoute>
                     </Layout>
                   }
@@ -209,7 +209,7 @@ function App() {
                     </Layout>
                   }
                 />
-                <Route
+                {/* <Route
                   path="/services"
                   element={
                     <Layout>
@@ -218,7 +218,7 @@ function App() {
                       </AnimatedRoute>
                     </Layout>
                   }
-                />
+                /> */}
                 <Route
                   path="/services/:id"
                   element={

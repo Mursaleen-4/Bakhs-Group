@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 // import { pageBackgrounds } from '../assets/videos';
 
-const Blogs: React.FC = () => {
+const News: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy] = useState('latest');
@@ -385,4 +385,4 @@ const Blogs: React.FC = () => {
   );
 };
 
-export default Blogs;
+export default News;
