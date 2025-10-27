@@ -17,14 +17,14 @@ const defaultServices: IService[] = [
     id: '1',
     title: 'Liner Agency',
     description: 'Professional agency services for shipping lines',
-    longDescription: 'As a leading liner agent, we provide comprehensive port agency services to ship owners and operators. Our experienced team handles all aspects of vessel operations, documentation, and port formalities to ensure smooth and efficient port calls.',
+    longDescription: 'As a leading Shipping Agent, we provide end to end agency services to our Principals. Our team is well equipped with vessel handling, managing special equipment and committed to safeguarding our Principals interests.',
     icon: 'ship',
     features: [
-      'Vessel port call coordination',
-      'Crew changes and welfare',
-      'Bunkering and supplies',
-      'Port documentation and clearances',
-      '24/7 operational support'
+      'Trained staff to handle all kinds of containerized cargo.',
+      'Proactive sales staff',
+      'In-house integrated Shipping software with EDI capabilities.',
+      'Maintaining prompt correspondence with principals',
+      'FCL & LCL Shipping'
     ],
     color: 'from-blue-500 to-blue-600'
   },
@@ -32,14 +32,15 @@ const defaultServices: IService[] = [
     id: '2',
     title: 'Freight Forwarding',
     description: 'End-to-end logistics solutions worldwide',
-    longDescription: 'Our comprehensive freight forwarding services handle all aspects of cargo movement, from origin to destination. We manage air, sea, and land transportation, ensuring your goods are delivered efficiently and cost-effectively.',
+    longDescription: 'Our specialized freight forwarding team handles every element of cargo movement, ensuring smooth global connectivity. We offer air, sea, and land transportation, ensuring your goods are delivered efficiently and cost-effectively.',
     icon: 'truck',
     features: [
       'Multimodal transport solutions',
-      'Customs clearance',
-      'Cargo insurance',
+      'Efficent Customs clearance',
+      'Inland Haulage',
       'Real-time tracking',
-      'Door-to-door service'
+      'Door-to-door service',
+      '24/7 Custom Service'
     ],
     color: 'from-green-500 to-green-600'
   },
@@ -47,14 +48,15 @@ const defaultServices: IService[] = [
     id: '3',
     title: 'Transportation',
     description: 'Reliable road haulage and cargo movement',
-    longDescription: 'Our transportation services provide seamless movement of goods with a modern fleet and experienced drivers. We offer full truckload (FTL) and less than truckload (LTL) services across the region.',
+    longDescription: 'We provide effortless movement of goods with a modern fleet and trusted drivers. We offer local and nationwide transportation solutions.',
     icon: 'truck',
     features: [
-      'FTL and LTL services',
-      'Dedicated fleet',
+      'Fully- equipped fleet',
       'Temperature-controlled transport',
       'Dangerous goods handling',
-      'GPS tracking'
+      'GPS tracking',
+      'Empty units transportation to / from terminal / depot and up-country',
+      'We provide empty unit transportation service to / from terminal / depot and up-country as needed.'
     ],
     color: 'from-purple-500 to-purple-600'
   },
@@ -62,29 +64,34 @@ const defaultServices: IService[] = [
     id: '4',
     title: 'Deport Service',
     description: 'Efficient container depot services',
-    longDescription: 'Our container depot services include storage, maintenance, and repair of shipping containers. We provide flexible solutions for container positioning and management to support your logistics operations.',
+    longDescription: 'Our empty depots are located at Prime locations with easy accessibility for transporters. We have the reliable resources for container positioning and management to support your logistics operations.',
     icon: 'package',
     features: [
-      'Container storage',
-      'Maintenance and repair',
-      'Cleaning services',
-      'Equipment inspection',
-      'Flexible leasing options'
+      'Prime locations in Karachi & Lahore',
+      'Professional MNR Team',
+      'Equipment inspections & monitoring',
+      'IICL Surveyor',
+      'Dry/ Reefer & specials handling',
+      'Reefer PTI/ Security & Surveillance',
+      'Round-the-clock-service',
+      'Strictly follow FIFO method'
+
     ],
     color: 'from-orange-500 to-orange-600'
   },
   {
     id: '5',
-    title: 'Ship Husbandry',
+    title: 'Vessel Handling',
     description: 'Comprehensive vessel support services',
     longDescription: 'Our ship husbandry services ensure smooth port operations for vessels. We coordinate all necessary services including crew changes, provisions, spare parts, and technical support to minimize vessel turnaround time.',
     icon: 'anchor',
     features: [
-      'Port agency services',
-      'Crew logistics',
+      'Vessel arrival and berthing prospects',
+      'Bulk cargo handling',
       'Technical support',
-      'Bunkering arrangements',
-      'Port documentation'
+      'Bunkering and supplies',
+      'Coordination with government and port authorities'
+
     ],
     color: 'from-cyan-500 to-blue-600'
   },
@@ -92,14 +99,15 @@ const defaultServices: IService[] = [
     id: '6',
     title: 'Chartering and Stevedoring',
     description: 'Vessel chartering and cargo handling services',
-    longDescription: 'We provide professional chartering services for vessels of all types and sizes. Our stevedoring services ensure efficient loading and unloading operations with experienced personnel and modern equipment.',
+    longDescription: 'We provide professional vessel chartering services tailored to all types and sizes of ships. Our stevedoring services ensure efficient loading and unloading operations with experienced personnel and modern equipment.',
     icon: 'anchor',
     features: [
-      'Vessel chartering',
-      'Cargo handling',
-      'Stevedoring services',
-      'Port operations',
+      'Time charter/ voyage charter',
+      'State of the art  equipment to handle various types of cargo',
+      'Cargo handling supervision',
+      'CFS Yard and cross stuffing',
       'Cargo lashing and securing'
+
     ],
     color: 'from-yellow-500 to-amber-600'
   },
@@ -111,28 +119,27 @@ const defaultServices: IService[] = [
     icon: 'package',
     features: [
       'Oversized cargo handling',
-      'Heavy lift solutions',
       'Route planning and surveys',
-      'Specialized equipment',
-      'Project management'
+      'Heavy lift cranes and specialized equipment',
+      'Oil and gas/ energy sector expertise'
     ],
     color: 'from-red-500 to-pink-600'
   },
-  {
-    id: '8',
-    title: 'NVOCC',
-    description: 'Non-Vessel Operating Common Carrier services',
-    longDescription: 'As a licensed NVOCC, we offer flexible and cost-effective shipping solutions. We consolidate cargo from multiple shippers to provide competitive rates and reliable service on major trade lanes.',
-    icon: 'ship',
-    features: [
-      'Consolidation services',
-      'Bill of Lading issuance',
-      'Door-to-door solutions',
-      'Cargo insurance',
-      'Documentation services'
-    ],
-    color: 'from-indigo-500 to-violet-600'
-  },
+  // {
+  //   id: '8',
+  //   title: 'NVOCC',
+  //   description: 'Non-Vessel Operating Common Carrier services',
+  //   longDescription: 'As a licensed NVOCC, we offer flexible and cost-effective shipping solutions. We consolidate cargo from multiple shippers to provide competitive rates and reliable service on major trade lanes.',
+  //   icon: 'ship',
+  //   features: [
+  //     'Consolidation services',
+  //     'Bill of Lading issuance',
+  //     'Door-to-door solutions',
+  //     'Cargo insurance',
+  //     'Documentation services'
+  //   ],
+  //   color: 'from-indigo-500 to-violet-600'
+  // },
   // {
   //   id: '9',
   //   title: 'Customs Clearance',

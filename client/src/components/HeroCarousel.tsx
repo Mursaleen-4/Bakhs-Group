@@ -30,7 +30,7 @@ const HeroCarousel: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      title: 'Your Reliable Partner',
+      title: 'Navigating Global Trade with You ',
       subtitle: 'Your Gateway to Global Success',
       description:
         'Connecting continents with reliable and efficient maritime solutions. Experience seamless global trade with our comprehensive services.',
@@ -65,7 +65,7 @@ const HeroCarousel: React.FC = () => {
       title: 'Decades of Excellence',
       subtitle: 'Where Every Mile Builds Trust',
       description:
-        'With years of experience in the industry, we deliver exceptional maritime services with a commitment to quality and customer satisfaction.',
+        'With 70+ years of expertise in the maritime industry, we continue to set the standard for quality, performance, and customer care',
       image: '',
       cta: 'About Us',
       ctaLink: '/about',

@@ -1,29 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Linkedin,Instagram } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { SiFacebook, SiLinkedin } from 'react-icons/si';
 
 const SocialMedia: React.FC = () => {
   const socialPlatforms = [
-    {
+{
       name: 'Facebook',
-      icon: Facebook,
+      icon: SiFacebook, // filled brand icon
       url: 'https://facebook.com/yaaseenshippinglines',
-      color: 'bg-blue-600 hover:bg-blue-600',
+      iconColor: 'text-white',
+      bg: 'bg-[#1877F2] group-hover:bg-[#166FE5]',
       description: 'Follow us for daily updates and company news'
     },
     {
       name: 'LinkedIn',
-      icon: Linkedin,
+      icon: SiLinkedin, // filled brand icon
       url: 'https://linkedin.com/company/yaaseen-shipping-lines',
-      color: 'bg-blue-700 hover:bg-blue-600',
+      iconColor: 'text-white',
+      bg: 'bg-[#0A66C2] group-hover:bg-[#0753A4]',
       description: 'Connect with us professionally'
     },
-        {
+    {
       name: 'Instagram',
       icon: Instagram,
       url: 'https://instagram.com/yaaseenshippinglines',
-      color: 'bg-blue-700 hover:bg-blue-600',
-      description: 'Enteract with us on Instagram'
+      // Instagram purple
+      iconColor: 'text-[#C13584]',
+      bg: 'bg-purple-50 group-hover:bg-purple-100',
+      description: 'Interact with us on Instagram'
     }
   ];
 
@@ -59,7 +64,7 @@ const SocialMedia: React.FC = () => {
           <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-2">
             GET SOCIAL WITH US
           </h2>
-          
+
           <p className="text-blue-600 max-w-2xl mx-auto text-sm">
             Stay connected for the latest updates and insights
           </p>
@@ -88,8 +93,10 @@ const SocialMedia: React.FC = () => {
                   className="flex items-center bg-white rounded-xl px-6 py-3 transition-all duration-300 hover:shadow-md border border-blue-100"
                   title={platform.description}
                 >
-                  <div className={`flex items-center justify-center w-12 h-12 rounded-full ${platform.color} mr-3 shadow-sm`}>
-                    <Icon className="w-5 h-5 text-white" />
+                  <div
+                    className={`flex items-center justify-center w-12 h-12 rounded-full ${platform.bg} mr-3 shadow-sm transition-colors`}
+                  >
+                    <Icon className={`w-5 h-5 ${platform.iconColor}`} />
                   </div>
                   <span className="text-blue-800 font-medium">{platform.name}</span>
                 </a>

@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
     {
       id: 'karachi',
       name: 'Karachi Office (Head Office)',
-      address: '10th Floor, Sheikh Sultan Trust Bldg, Beaumont Road, Karachi, Pakistan',
+      address: '10th Floor, Sheikh Sultan Trust Building, Beaumont Road, Karachi',
       phone: '+92-21-35688057-59, 35693004, 6, 7',
       fax: '+92-21-35683051, 35687367',
       email: 'info@yslpk.com',
@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
     {
       id: 'lahore',
       name: 'Lahore Office',
-      address: 'Grand Square Mall, Office no E9C/2, 9th Floor, Gulberg III Lahore',
+      address: 'Office no E9C/2, 9th Floor,Grand Square Mall, Gulberg III Lahore',
       phone: '+92-42-35764134-5, 35772049',
       email: 'lahore@yslpk.com',
       hours: 'Monday - Saturday: 9:00 AM - 5:00 PM',
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
     'Ocean Freight (FCL/LCL)',
     'Freight Forwarding',
     'Container Services',
-    'Ship Husbandry',
+    'Vessel Handling',
     'Chartering & Brokerage',
     'Project Cargo',
     'General Inquiry',

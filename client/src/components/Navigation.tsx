@@ -6,8 +6,8 @@ import {
   ChevronDown,
   ChevronRight,
   User,
-  Image,
-  Newspaper,
+  // Image,
+  // Newspaper,
   Quote,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -156,20 +156,20 @@ const Navigation: React.FC = () => {
                     <DropdownItem to="/services/2" label="Freight Forwarding" />
                     <DropdownItem to="/services/3" label="Transportation" />
                     <DropdownItem to="/services/4" label="Deport Service" />
-                    <DropdownItem to="/services/5" label="Ship Husbandry" />
+                    <DropdownItem to="/services/5" label="Vessel Handling" />
                     <DropdownItem to="/services/6" label="Chartering and Stevedoring" />
                     <DropdownItem to="/services/7" label="Project Cargo Handling" />
-                    <DropdownItem to="/services/8" label="NVOCC" />
+                    {/* <DropdownItem to="/services/8" label="NVOCC" /> */}
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
 
             <NavLink to="/gallery">
-              <Image className="w-4 h-4 mr-1" /> GALLERY
+              GALLERY
             </NavLink>
             <NavLink to="/News">
-              <Newspaper className="w-4 h-4 mr-1" /> News
+            News
             </NavLink>
             <NavLink to="/tariffs">TARIFFS</NavLink>
             <NavLink to="/contact">CONTACT</NavLink>
@@ -268,17 +268,19 @@ const Navigation: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     className="pl-6 space-y-1"
                   >
-                    <MobileLink to="/services/1" label="Liner Shipping" />
+                    <MobileLink to="/services/1" label="Liner Agency" />
                     <MobileLink to="/services/2" label="Freight Forwarding" />
-                    <MobileLink to="/services/3" label="Container Services" />
-                    <MobileLink to="/services/4" label="Ship Husbandry" />
-                    <MobileLink to="/services/5" label="Warehousing" />
-                    <MobileLink to="/services/6" label="Customs Clearance" />
+                    <MobileLink to="/services/3" label="Transportation" />
+                    <MobileLink to="/services/4" label="Depot Services" />
+                    <MobileLink to="/services/5" label="Vessel Handling" />
+                    <MobileLink to="/services/6" label="Chartering and Stevedoring"/>
+                    <MobileLink to="/services/7" label="Project Cargo Handling" />
+                    {/* <MobileLink to="/services/8" label="NVOCC" /> */}
                   </motion.div>
                 )}
               </AnimatePresence>
-              <MobileLink to="/gallery" label="Gallery" icon={<Image />} />
-              <MobileLink to="/news" label="News" icon={<Newspaper />} />
+              <MobileLink to="/gallery" label="Gallery" />
+              <MobileLink to="/news" label="News" />
               <MobileLink to="/tariffs" label="Tariffs" />
               <MobileLink to="/schedule" label="Vessel Schedule" />
               <MobileLink to="/contact" label="Contact" />

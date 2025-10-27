@@ -51,10 +51,10 @@ const Footer: React.FC = () => {
     { name: 'Freight Forwarding', href: '/services/2'},
     { name: 'Transportation', href: '/services/3' },
     { name: 'Deport Services', href: '/services/4' },
-    { name: 'Ship Husbandry', href: '/services/5' },
+    { name: 'Vessel Handling', href: '/services/5' },
     { name: 'Chartering and Stevedoring', href: '/services/6' },
     { name: 'Project Cargo Handling', href: '/services/7' },
-    { name: 'NVOCC', href: '/services/8' }
+    // { name: 'NVOCC', href: '/services/8' }
   ];
 
   // const eServices = [
@@ -78,13 +78,14 @@ const Footer: React.FC = () => {
   const offices = [
     {
       city: 'Karachi',
-      address: '10th Floor, Sheikh Sultan Trust Bldg, Beaumont Road,Karachi',
+      address: '10th Floor, Sheikh Sultan Trust Building, Beaumont Road,Karachi',
+
       phone: '+92-21-35688057-59',
       email: 'info@yslpk.com'
     },
     {
       city: 'Lahore',
-      address: 'Grand Square Mall, Office no E9C/2, 9th Floor, Gulberg III,Lahore',
+      address: 'Office no E9C/2,9th Floor,Grand Square Mall, Gulberg III,Lahore',
       phone: '+92-42-35764134',
       email: 'lahore@yslpk.com'
     },

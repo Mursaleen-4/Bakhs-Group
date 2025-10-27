@@ -1,7 +1,23 @@
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {  Ship, Truck, Calendar,ArrowRight,Anchor, Briefcase, Globe, Users, Target, BarChart2, Clock, Shield, Award } from 'lucide-react';
+// In client/src/pages/About.tsx
+import {
+  Briefcase,
+  BarChart2,
+  Users,
+  Award,
+  Ship,
+  Globe,
+  Clock,
+  Shield,
+  Anchor,
+  Truck,
+  Target,
+  ArrowRight,
+  Calendar
+} from "lucide-react";
+
 
 
 const About: React.FC = () => {
@@ -9,43 +25,21 @@ const About: React.FC = () => {
   // const [expandedCompany, setExpandedCompany] = useState<string | null>(null);
 
   const companies = [
-    // {
-    //   id: 'baksh-group',
-    //   name: "Baksh Group",
-    //   shortDescription: "The parent company providing strategic direction and investment across all group businesses.",
-    //   description: "Baksh Group is a diversified conglomerate with a strong presence in the maritime, logistics, and investment sectors. As the parent company, we provide strategic direction, financial strength, and operational support to all our subsidiaries.",
-    //   icon: <Building2 className="w-8 h-8 text-blue-600" />,
-    //   link: "/baksh-group",
-    //   year: 2005,
-    //   employees: "1000+",
-    //   locations: ["Karachi", "Lahore", "Islamabad", "Dubai"],
-    //   values: [
-    //     { icon: <Target className="w-5 h-5" />, title: "Innovation", description: "Pioneering new solutions" },
-    //     { icon: <Shield className="w-5 h-5" />, title: "Integrity", description: "Ethical business practices" },
-    //     { icon: <BarChart2 className="w-5 h-5" />, title: "Growth", description: "Sustainable expansion" }
-    //   ],
-    //   stats: [
-    //     { value: "18+", label: "Years Experience" },
-    //     { value: "5+", label: "Countries" },
-    //     { value: "50+", label: "Vessels" },
-    //     { value: "1M+", label: "TEUs Handled" }
-    //   ]
-    // },
     {
       id: 'baksh-investment',
       name: "Baksh Investment Limited",
       shortDescription: "Strategic investment and financial services company driving growth in the maritime sector.",
-      description: "Baksh Investment Limited is the financial backbone of our group, specializing in maritime investments, portfolio management, and strategic financial services. We identify and nurture high-potential opportunities in the shipping and logistics sectors.",
+      description: "Baksh Investment Ltd. was established in 1967 as part of the Group’s strategic initiative to expand and diversify its business operations. ",
       icon: <Briefcase className="w-8 h-8 text-blue-600" />,
       link: "/baksh-investment",
       year: 2008,
       employees: "200+",
       locations: ["Karachi", "Dubai"],
-      values: [
-        { icon: <BarChart2 className="w-5 h-5" />, title: "Excellence", description: "Superior performance" },
-        { icon: <Users className="w-5 h-5" />, title: "Client Focus", description: "Tailored solutions" },
-        { icon: <Award className="w-5 h-5" />, title: "Integrity", description: "Trust and transparency" }
-      ],
+values: [
+  { icon: <BarChart2 className="w-5 h-5" />, title: "Excellence", description: "Superior performance" },
+  { icon: <Users className="w-5 h-5" />, title: "Client Focus", description: "Tailored solutions" },
+  { icon: <Award className="w-5 h-5" />, title: "Integrity", description: "Trust and transparency" }
+],
       // stats: [
       //   { value: "$500M+", label: "Assets Under Management" },
       //   { value: "50+", label: "Investment Projects" },
@@ -57,7 +51,7 @@ const About: React.FC = () => {
       id: 'yaaseen-shipping',
       name: "Yaaseen Shipping Lines",
       shortDescription: "Leading maritime services provider with global reach and excellence in shipping solutions.",
-      description: "Yaaseen Shipping Lines is a premier maritime services company offering comprehensive shipping solutions worldwide. With a modern fleet and extensive network, we provide reliable and efficient sea transportation services across international waters.",
+      description: "Following the joint venture with OOCL in 2007, Yaaseen Shipping Lines was appointed as the exclusive booking agent for OOCL Pakistan in Lahore, Multan, and Faisalabad. ",
       icon: <Ship className="w-8 h-8 text-blue-600" />,
       link: "/yaaseen-about",
       year: 2012,
@@ -79,7 +73,7 @@ const About: React.FC = () => {
       id: 'yaaseen-pvt',
       name: "Yaaseen Shipping (PVT) Ltd",
       shortDescription: "Specialized cargo solutions and vessel operations with a focus on efficiency and reliability.",
-      description: "Yaaseen Shipping (PVT) Ltd specializes in providing comprehensive shipping and logistics solutions tailored to meet the specific needs of our clients. Our expertise includes container shipping, bulk cargo, and specialized transport services.",
+      description: "Yaaseen Shipping (PVT) Ltd specializes in providing comprehensive shipping and logistics solutions tailored to meet the specific needs of our clients. Our expertise includes container shipping, break bulk, special equipment equipment for sensitive or oversized shipments, and project cargo handling.",
       icon: <Anchor className="w-8 h-8 text-blue-600" />,
       link: "/yaaseen-shipping-pvt",
       year: 2015,
@@ -112,12 +106,6 @@ const About: React.FC = () => {
         { icon: <Users className="w-5 h-5" />, title: "Partnership", description: "Collaborative approach" },
         { icon: <BarChart2 className="w-5 h-5" />, title: "Efficiency", description: "Streamlined operations" }
       ],
-      // stats: [
-      //   { value: "1M+", label: "Shipments/Year" },
-      //   { value: "100+", label: "Vehicles" },
-      //   { value: "50K+", label: "Sq. Ft. Warehouse" },
-      //   { value: "99.9%", label: "Accuracy" }
-      // ]
     }
   ];
     const milestones = [
@@ -132,9 +120,6 @@ const About: React.FC = () => {
     { year: "2008-2011", event: 'Established off-dock empty container depots in Karachi and Lahore Port' },
   ];
 
-  // const toggleCompany = (companyId: string) => {
-  //   setExpandedCompany(expandedCompany === companyId ? null : companyId);
-  // };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -149,14 +134,6 @@ const About: React.FC = () => {
         <div className="relative min-h-[26rem] flex items-center justify-center py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center">
-              {/* <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 border border-blue-100 mb-5"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <span className="text-xs font-semibold tracking-wider">SINCE 1951</span>
-              </motion.div> */}
 
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-gray-900"
@@ -199,30 +176,6 @@ const About: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </motion.div>
-
-              {/* <motion.div
-                className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.45 }}
-              >
-                <div className="rounded-xl bg-white shadow-sm border border-gray-100 py-4">
-                  <div className="text-2xl font-bold text-gray-900">70+</div>
-                  <div className="text-xs text-gray-500">Years of Excellence</div>
-                </div>
-                <div className="rounded-xl bg-white shadow-sm border border-gray-100 py-4">
-                  <div className="text-2xl font-bold text-gray-900">500+</div>
-                  <div className="text-xs text-gray-500">Clients</div>
-                </div>
-                <div className="rounded-xl bg-white shadow-sm border border-gray-100 py-4">
-                  <div className="text-2xl font-bold text-gray-900">Global</div>
-                  <div className="text-xs text-gray-500">Presence</div>
-                </div>
-                <div className="rounded-xl bg-white shadow-sm border border-gray-100 py-4">
-                  <div className="text-2xl font-bold text-gray-900">24/7</div>
-                  <div className="text-xs text-gray-500">Support</div>
-                </div>
-              </motion.div> */}
             </div>
           </div>
         </div>
@@ -273,26 +226,16 @@ const About: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-Established in 1951 as United Oriental Steamship Co., the company began by offering
-liner services between East Pakistan and West Pakistan, quickly rising to prominence as
-the largest ship-owning company in the country.
+                    Established in 1951 as United Oriental Steamship Co. The company began by offering liner services between East Pakistan (now Bangladesh) and West Pakistan (now Pakistan), quickly rising to prominence as the largest ship-owning company in the country.
                   </p>
                    <p className="text-gray-600 mb-6 leading-relaxed">
-                     In 1967, Baksh Investment Ltd was incorporated to expand and diversify business
-operations which included stevedoring, terminal handling, and lighterage operations.
-The company became contractors for stevedoring and lighterage for prominent
-organizations such as Pakistan National Shipping Corporation (PNSC).
+                    Our group of companies work in synergy to deliver end-to-end solutions, from maritime transport and logistics to strategic investments and financial services. We operate across multiple countries with a team of dedicated professionals committed to excellence.
 
                    </p>
                    <p className="text-gray-600 mb-6 leading-relaxed">
-                     In 1981, Yaaseen
-Shipping Lines was established to represent principals, and by early 1984, the company
-was appointed as agents for Orient Overseas Container Line (OOCL).In 2006, the company was appointed as agents for STX Pan Ocean Co. Ltd. (now Pan
-Ocean), followed by an appointment in 2007 as agents for Maldives National Shipping.
-That same year, a joint venture agreement with OOCL was formalized in Pakistan in
-accordance with OOCL’s global JV policy
+                    With independent management and specialized leadership, each company within our Group operates autonomously to deliver high-quality shipping and logistics solutions while upholding the Group’s values of trust and excellence.
                    </p>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    {/* <p className="text-gray-600 mb-6 leading-relaxed">
                     In 2007, a dedicated freight forwarding
 division was launched under UOSL Shipping and Logistics Pvt Ltd, offering customized
 logistics solutions to domestic and regional clients.
@@ -303,172 +246,17 @@ established in Karachi and Lahore Port, serving key clients.
                     Our group companies work in synergy to deliver end-to-end solutions, from maritime transport and logistics 
                     to strategic investments and financial services. We operate across multiple countries with a team of dedicated 
                     professionals committed to excellence.
-                  </p>
-                  {/* <div className="grid grid-cols-2 gap-4 mt-8">
-                    <div className="bg-gray-800 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-white">70+</div>
-                      <div className="text-sm text-gray-300">Years Experience</div>
-                    </div>
-                    <div className="bg-gray-800 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-white">Multiple</div>
-                      <div className="text-sm text-gray-300">Countries</div>
-                    </div>
-                    <div className="bg-gray-800 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-white">Experienced</div>
-                      <div className="text-sm text-gray-300">Employees</div>
-                    </div>
-                    <div className="bg-gray-800 p-4 rounded-lg">
-                  </div>
-                  <div className="bg-gray-800 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-white">Multiple</div>
-                    <div className="text-sm text-gray-300">Countries</div>
-                  </div>
-                  <div className="bg-gray-800 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-white">Experienced</div>
-                    <div className="text-sm text-gray-300">Employees</div>
-                  </div>
-                  <div className="bg-gray-800 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-white">Many</div>
-                    <div className="text-sm text-gray-300">Vessels</div>
-                  </div>
-                </div> */}
+                  </p> */}
               </div>
-              <div className="grid grid-rows-2 gap-4 h-full w-full">
                 <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
-                  <img 
-                    src="/images/1.jpg" 
-                    alt="Baksh Group Operations" 
+                  <img
+                    src="/images/1.jpg"
+                    alt="Baksh Group"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-                <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
-                  <img 
-                    src="/images/2.jpg" 
-                    alt="Baksh Group Team" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-              </div>
             </div>
           </motion.section>
-
-          {/* { Our Companies }
-            {/* { Our Companies }
-{{ ... }
-            <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Companies</h2>
-              <div className="space-y-4">
-                {companies.map((company, index) => (
-                  <motion.div 
-                    key={company.id}
-                    className="bg-white rounded-xl shadow-md overflow-hidden"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                  >
-                    <button
-                      onClick={() => toggleCompany(company.id)}
-                      className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="flex items-center">
-                        <div className="p-2 bg-blue-100 rounded-lg mr-4">
-                          {company.icon}
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-gray-900">{company.name}</h3>
-                          <p className="text-sm text-gray-500">{company.shortDescription}</p>
-                        </div>
-                      </div>
-                      {expandedCompany === company.id ? (
-                        <ChevronUp className="h-5 w-5 text-gray-400" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5 text-gray-400" />
-                      )}
-                    </button>
-                    <AnimatePresence>
-                      {expandedCompany === company.id && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-6 pb-6 pt-2 border-t border-gray-100">
-                            <div className="grid md:grid-cols-3 gap-6">
-                              <div className="md:col-span-2">
-                                <h4 className="font-medium text-gray-900 mb-2">About {company.name}</h4>
-                                <p className="text-gray-600 mb-4">{company.description}</p>
-                                <div className="mt-4">
-                                  <h5 className="font-medium text-gray-900 mb-2">Locations</h5>
-                                  <div className="flex flex-wrap gap-2">
-                                    {company.locations.map((location, i) => (
-                                      <span key={i} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                                        {location}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </div>
-                              </div>
-                              <div>
-                                <h5 className="font-medium text-gray-900 mb-3">Key Stats</h5>
-                                <div className="space-y-3">
-                                  <div className="flex items-center">
-                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                                      <Clock className="h-5 w-5" />
-                                    </div>
-                                    <div className="ml-3">
-                                      <p className="text-sm font-medium text-gray-500">Established</p>
-                                      <p className="text-sm text-gray-900">{company.year}</p>
-                                    </div>
-                                  </div>
-                                  <div className="flex items-center">
-                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                                      <Users className="h-5 w-5" />
-                                    </div>
-                                    <div className="ml-3">
-                                      <p className="text-sm font-medium text-gray-500">Employees</p>
-                                      <p className="text-sm text-gray-900">{company.employees}</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="mt-6">
-                                  <h5 className="font-medium text-gray-900 mb-3">Core Values</h5>
-                                  <div className="space-y-2">
-                                    {company.values.map((value, i) => (
-                                      <div key={i} className="flex items-start">
-                                        <div className="flex-shrink-0 h-5 w-5 text-blue-600">
-                                          {value.icon}
-                                        </div>
-                                        <div className="ml-3">
-                                          <p className="text-sm font-medium text-gray-900">{value.title}</p>
-                                          <p className="text-sm text-gray-500">{value.description}</p>
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="mt-6 pt-6 border-t border-gray-100 flex justify-end">
-                              <a
-                                href={company.link}
-                                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                              >
-                                Learn more about {company.name.split(' ')[0]}
-                                <ArrowRight className="ml-2 -mr-1 h-4 w-4" />
-                              </a>
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ))}
-              </div>
-            </section> */}
-
-
 {/* Our Mission & Vision */}
 <section
   className="relative py-16 text-white bg-center bg-cover bg-no-repeat"
@@ -541,44 +329,62 @@ Customers, Principals and stakeholders.
 </section>
 
       {/* Company History */}
-      <section className="py-16 bg-gray-50">
+      {/* Timeline */}
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Journey Through Time</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From humble beginnings in 1951 to becoming a leading maritime services provider in Pakistan and beyond.
-            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Our Journey Through Time
+            </h2>
+            {/* <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+              From humble beginnings in 1951 to becoming a leading maritime
+              services provider in Pakistan and beyond.
+            </p> */}
           </motion.div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-primary-200"></div>
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                className={`relative flex items-center ${
-                  index % 2 === 0 ? 'justify-start' : 'justify-end'
-                } mb-8`}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-              >
-                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                  <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                    <div className="flex items-center mb-3">
-                      <Calendar className="w-5 h-5 text-primary-600 mr-2" />
-                      <span className="text-2xl font-bold text-primary-600">{milestone.year}</span>
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-primary-200"></div>
+            <div className="space-y-8 md:space-y-0">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.year}
+                  className={`relative flex flex-col md:flex-row items-center md:items-start mb-8 md:mb-12 ${
+                    index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                  }`}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                >
+                  <div
+                    className={`w-full md:w-5/12 ${
+                      index % 2 === 0
+                        ? "md:text-right md:pr-8"
+                        : "md:text-left md:pl-8"
+                    }`}
+                  >
+                    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                      <div className="flex items-center mb-3">
+                        <Calendar className="w-5 h-5 text-primary-600 mr-2" />
+                        <span className="text-xl sm:text-2xl font-bold text-primary-600">
+                          {milestone.year}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                        {milestone.event}
+                      </p>
                     </div>
-                    <p className="text-gray-700 leading-relaxed">{milestone.event}</p>
                   </div>
-                </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white"></div>
-              </motion.div>
-            ))}
+                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white"></div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -594,7 +400,7 @@ Customers, Principals and stakeholders.
                   },
                   {
                     title: "Excellence",
-                    description: "We strive for the highest standards in everything we do, continuously improving and innovating.",
+                    description: "We uphold the highest standards across all operations, , continuously improving and progressing",
                     icon: <Award className="h-8 w-8 text-blue-600" />
                   },
                   {
@@ -609,12 +415,12 @@ Customers, Principals and stakeholders.
                   },
                   {
                     title: "Sustainability",
-                    description: "We are committed to environmental responsibility and sustainable business practices.",
+                    description: "Committed to protecting the environment through sustainable and responsible practices.",
                     icon: <Globe className="h-8 w-8 text-blue-600" />
                   },
                   {
                     title: "Teamwork",
-                    description: "We collaborate across our group to achieve shared goals and deliver exceptional results.",
+                    description: "We work together by embracing different viewpoints and prioritizing diversity and inclusion to reach our objectives.",
                     icon: <Users className="h-8 w-8 text-blue-600" />
                   }
                 ].map((value, index) => (
@@ -635,56 +441,6 @@ Customers, Principals and stakeholders.
                 ))}
               </div>
             </section>
-
-            {/* Leadership Team - Commented out for now
-            <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Leadership Team</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "John Smith",
-                    position: "Group CEO",
-                    bio: "20+ years of experience in maritime and logistics industry.",
-                    image: "https://randomuser.me/api/portraits/men/1.jpg"
-                  },
-                  {
-                    name: "Sarah Johnson",
-                    position: "CFO",
-                    bio: "Financial expert with extensive experience in corporate finance.",
-                    image: "https://randomuser.me/api/portraits/women/1.jpg"
-                  },
-                  {
-                    name: "Michael Chen",
-                    position: "COO",
-                    bio: "Operations leader with a track record of operational excellence.",
-                    image: "https://randomuser.me/api/portraits/men/2.jpg"
-                  }
-                ].map((member, index) => (
-                  <motion.div 
-                    key={index}
-                    className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                  >
-                    <div className="h-64 bg-gray-200 overflow-hidden">
-                      <img 
-                        src={member.image} 
-                        alt={member.name} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                      <p className="text-blue-600 font-medium mb-2">{member.position}</p>
-                      <p className="text-gray-600 text-sm">{member.bio}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </section>
-            */}
           </div>
         ) : (
           // Individual Company View
@@ -733,28 +489,45 @@ Customers, Principals and stakeholders.
                           {company.description}
                         </p>
                         <p className="text-gray-600 mb-6 leading-relaxed">
-                          {company.id === 'baksh-investment' && "With over 15 years of experience in maritime investments, we have built a reputation for identifying and nurturing high-potential opportunities in the shipping and logistics sectors. Our strategic approach and deep industry knowledge enable us to deliver exceptional returns for our clients. We specialize in portfolio management, risk assessment, and strategic financial planning to help our clients achieve their investment goals in the maritime industry."}
-                          {company.id === 'yaaseen-shipping' && "Operating with a modern fleet and extensive global network, we provide reliable and efficient sea transportation services across international waters. Our commitment to safety, innovation, and customer satisfaction has made us a trusted partner in the maritime industry. We handle container shipping, bulk cargo, and specialized transport with state-of-the-art vessels and experienced crews ensuring timely and secure delivery of goods worldwide."}
-                          {company.id === 'yaaseen-pvt' && "Our specialized approach to shipping and logistics solutions ensures that every client receives tailored services that meet their specific requirements. We excel in container shipping, bulk cargo handling, and specialized transport services with unmatched efficiency. Our team of logistics experts works closely with clients to develop customized solutions that optimize supply chain performance and reduce operational costs while maintaining the highest standards of service delivery."}
-                          {company.id === 'uosl' && "UOSL has also established Empty Container Terminal at Lahore located at well known location for customers at 22 km main Multan road( where all the container terminals located ) near dry ports and industrial area, UOSL Lahore has an area of 3 acres land on which storage / operation commenced from 7th-May-2011 with all below mentioned facilities also we have back up area of another 4 acres for expansion on 2nd phase"}
+                          {company.id === 'baksh-investment' && "In 1972, under the Government of Pakistan’s nationalization policy, the company’s fleet was acquired by the state."}
+                          {company.id === 'yaaseen-shipping' && "Backed by a proactive and experienced sales team, Yaaseen Shipping Lines efficiently manages both inbound and outbound shipments, maintaining a strong record of reliability and performance. The company plays an active role in freight forwarding operations solely for OOCL Pakistan and has developed a wide and diversified customer base across key export sectors including textiles, minerals, rice, garments, and cotton yarn. "}
+                          {company.id === 'yaaseen-pvt' && "Our team of logistics experts works closely with clients to develop customized solutions that optimize supply chain performance and reduce operational costs while maintaining the highest standards of service."}
+                          {company.id === 'uosl' && "In 2011, UOSL expanded its operations by establishing an Empty Container Terminal on Multan Road, Lahore, a well-known location for all customers. The terminal is ideally positioned near dry ports and key industrial areas. The Lahore facility covers 3 acres, with another 4 acres reserved for future expansion (Phase II)."}
                         </p>
                         <p className="text-gray-600 mb-6 leading-relaxed">
-                          {company.id === 'baksh-investment' && "Our investment philosophy centers on long-term value creation through careful analysis of market trends and emerging opportunities in the maritime sector. We leverage our deep industry expertise to identify undervalued assets and growth potential, providing our clients with diversified investment portfolios that deliver consistent returns while managing risk effectively."}
-                          {company.id === 'yaaseen-shipping' && "With our comprehensive fleet management system and strategic partnerships across major shipping routes, we ensure optimal vessel utilization and route efficiency. Our advanced tracking technology and real-time monitoring systems provide complete visibility throughout the shipping process, giving our clients peace of mind and enabling them to make informed decisions about their cargo movements."}
-                          {company.id === 'yaaseen-pvt' && "We understand that each client has unique shipping requirements and challenges. Our flexible service offerings include charter services, project cargo handling, and specialized equipment for sensitive or oversized shipments. Our commitment to continuous improvement and investment in modern infrastructure ensures we remain at the forefront of the shipping industry."}
-                          {company.id === 'uosl' && "Our Empty Container Park is fully equipped with all the necessary requisites of the commercial infrastructures, i.e. experienced, efficient and professional key personnels, fully automated and computerized operation systems providing timely reports / documentation, including electronic data inter-change (EDI) facilities and competent office / field operation staff."}
+                          {company.id === 'baksh-investment' && "In 1978, Baksh Investment Ltd resumed operations, initiating services in stevedoring, terminal handling, and lighterage operations. The company quickly established itself as a trusted contractor for major national organizations, including the Pakistan National Shipping Corporation (PNSC), Rice Export Corporation of Pakistan, and the Trading Corporation of Pakistan."}
+                          {company.id === 'yaaseen-shipping' && "By combining deep industry knowledge with local market expertise, Yaaseen Shipping Lines continues to achieve consistent growth in volume and revenue, particularly through light cargo bookings and specialized logistics arrangements.  Its operational excellence is reinforced by reliable documentation, prompt communication, and close coordination with OOCL offices and customers. With a customer-centric approach, Yaaseen Shipping Lines focuses on nurturing long-term partnerships while actively expanding its clientele through superior service delivery, timely responses, and value-driven logistics solutions. "}
+                          {company.id === 'yaaseen-pvt' && "Established in 1981, Yaaseen Shipping Pvt Ltd began operations to represent international shipping principals in Pakistan. In 1984, the company was appointed as the exclusive agent for Orient Overseas Container Line (OOCL) and demonstrated outstanding performance throughout the years, earning a strong reputation within the industry. Building on this success, in 2006, YSL was further entrusted with agency representation for STX Pan Ocean Co Ltd (now Pan Ocean)."}
+                          {company.id === 'uosl' && "UOSL’s Empty Container Parks are fully equipped with all essential commercial infrastructure, including experienced and professional personnel, automated and computerized operations, and timely electronic reporting/documentation (EDI). Our competent office and field teams ensure operational efficiency and accuracy across all processes."}
                         </p>
                         <p className="text-gray-600 mb-6 leading-relaxed">
-                          {company.id === 'uosl' && "Our philosophy is based on providing services to Customers satisfaction, with the aim to serve our Customers in a friendly, professional environment, providing empty container storage / handling and providing complete information / real time reporting to our Customersin respect of all their containers handled by us"}
+                          {company.id === 'baksh-investment' && "The company has handled a diverse portfolio of breakbulk and containership vessels, including general cargo, project cargo, heavy lifts, and containerized shipment, ensuring adherence to international standards of safety and service quality. Its skilled workforce, modern equipment, and long-standing industry expertise has assisted in handling complete scope of work for Principal’s vessels arriving at Karachi or Port Qasim, including liaison with terminals for berth availability, arranging fuel and bunker supplies for the vessel and coordinating with the ship crew."}
+                          {company.id === 'yaaseen-shipping' && "Today, Yaaseen Shipping Lines stands as a trusted representative of OOCL in Pakistan, recognized for its integrity, professionalism, and unwavering commitment to quality in every aspect of its operations."}
+                          {company.id === 'yaaseen-pvt' && "In 2007, the company was appointed as the exclusive agent for Maldives National Shipping and, in the same year, entered into a joint venture agreement with OOCL in line with OOCL’s global JV policy. This milestone strengthened YSL’s position as a key player in Pakistan’s shipping and logistics industry, enhancing its operational capacity and service network."}
+                          {company.id === 'uosl' && "We maintain our clients’ trust and satisfaction through 24/7 on-site security, a dedicated backup power supply, and dual-gate access (In/Out) to ensure smooth traffic flow and faster truck turnaround. The depot also offers ample vehicle parking space for transporters."}
                         </p>
-                        {/* <div className="grid grid-cols-2 gap-4 mt-8">
-                          {company.stats.slice(0, 4).map((stat, i) => (
-                            <div key={i} className="bg-gray-800 p-4 rounded-lg">
-                              <div className="text-2xl font-bold text-white">{stat.value}</div>
-                              <div className="text-sm text-gray-300">{stat.label}</div>
-                            </div>
-                          ))}
-                        </div> */}
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                          {company.id === 'baksh-investment' && "Baksh Investment Ltd maintains strong relationships with port authorities, customs departments, and other key stakeholders, ensuring smooth, efficient, and compliant vessel operations."}
+                          {company.id === 'yaaseen-pvt' && (
+                         <>
+                               Over the years, Yaaseen Shipping Pvt Ltd has continued to expand its partnerships and currently represents several renowned global shipping lines, including:
+                            <ul className="list-disc list-inside mt-2">
+                                  <li>W Container Lines Ltd.</li>
+                                <li>China SOC Lines</li>
+                                <li>Metro Logistics International Pvt Ltd.</li>
+                                <li>Shanghai Jin Jiang Shipping (Group) Co Ltd.</li>
+                              </ul>
+                          </>
+                          )}
+                        </p>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                          {company.id === 'baksh-investment' && "In chartering, the company provides end-to-end solutions, covering vessel chartering, voyage coordination, and cargo movement for both import and export sectors. Baksh Investment Ltd has successfully arranged vessel charters for dry bulk, breakbulk, and project cargoes, maintaining strong relationships with regional and international shipowners, charterers, and brokers."}
+                          {company.id === 'yaaseen-pvt' &&"Through these strategic alliances, YSL has built a robust presence in both regional and global markets, offering reliable maritime and logistics solutions across a wide range of trade routes. The company’s dedicated team of professionals ensures that each client receives personalized service, timely communication, and efficient cargo handling, reinforcing YSL’s standing as a trusted and performance-driven shipping agency in Pakistan."}
+                          {company.id === 'uosl' &&"Our key clients include OOCL, COSCO, Pan Ocean Co. Ltd, Metro Logistics International (Pvt.) Ltd, and Shanghai Jin Jiang Shipping (Group) Co. Ltd."}
+                        </p>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                          {company.id === 'baksh-investment' && "Over the years, the company has evolved into a leading service provider in Pakistan’s maritime sector, offering a comprehensive range of port and vessel management services. With a legacy spanning over five decades, Baksh Investment Ltd remains committed to operational excellence, client satisfaction, and continuous innovation in Pakistan’s maritime and logistics industry."}
+                        </p>
                       </div>
                       <div className="bg-gray-100 rounded-lg overflow-hidden h-96 md:h-full">
                         <img 
@@ -770,89 +543,7 @@ Customers, Principals and stakeholders.
                     </div>
                   </motion.section>
 
-                  {/* Company Values
-                  <div className="mb-12">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Values</h2>
-                    <div className="grid md:grid-cols-3 gap-6">
-                      {company.values.map((value, i) => (
-                        <motion.div 
-                          key={i}
-                          className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: i * 0.1 }}
-                        >
-                          <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
-                            {value.icon}
-                          </div>
-                          <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
-                          <p className="text-gray-600">{value.description}</p>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div> */}
-
-                  {/* Company Services
-                  <div className="mb-12">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Services</h2>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {[
-                        {
-                          title: "Maritime Transport",
-                          description: "Efficient and reliable sea freight solutions for all types of cargo."
-                        },
-                        {
-                          title: "Logistics Solutions",
-                          description: "End-to-end supply chain management and logistics services."
-                        },
-                        {
-                          title: "Port Operations",
-                          description: "Comprehensive port management and stevedoring services."
-                        },
-                        {
-                          title: "Investment Services",
-                          description: "Strategic investment solutions for maritime and logistics sectors."
-                        }
-                      ].map((service, i) => (
-                        <motion.div 
-                          key={i}
-                          className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: i * 0.1 }}
-                        >
-                          <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
-                          <p className="text-gray-600">{service.description}</p>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div> */}
-
-                  {/* CTA Section
-                  <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-8 text-white">
-                    <div className="max-w-3xl mx-auto text-center">
-                      <h2 className="text-3xl font-bold mb-4">Ready to get started with {company.name}?</h2>
-                      <p className="text-xl text-blue-100 mb-8">
-                        Contact us today to discuss how we can help with your {company.name.toLowerCase().includes('shipping') ? 'shipping' : 'business'} needs.
-                      </p>
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                          href="/contact"
-                          className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-8"
-                        >
-                          Contact Us
-                        </a>
-                        <a
-                          href={company.link}
-                          className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-8"
-                        >
-                          Learn More
-                        </a>
-                      </div>
-                    </div>
-                  </div> */}
+                  
                 </motion.div>
               )
             ))}
@@ -860,84 +551,6 @@ Customers, Principals and stakeholders.
         )}
       </main>
 
-{/* Global Footer CTA
-<footer className="bg-gray-900 text-white py-12 w-full mt-auto">
-  <div className="w-full">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to grow with us?</h2>
-        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-          Join thousands of satisfied clients who trust our group for their maritime and logistics needs.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-8"
-          >
-            Get in Touch
-          </a>
-          <a
-            href="/services"
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-8"
-          >
-            Explore Services
-          </a>
-        </div>
-      </div>
-
-      <div className="mt-12 pt-8 border-t border-gray-800">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Group Companies</h3>
-            <ul className="mt-4 space-y-2">
-              {companies.map((company) => (
-                <li key={company.id}>
-                  <a href={company.link} className="text-base text-gray-300 hover:text-white">
-                    {company.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Quick Links</h3>
-            <ul className="mt-4 space-y-2">
-              <li><a href="/about" className="text-base text-gray-300 hover:text-white">About Us</a></li>
-              <li><a href="/services" className="text-base text-gray-300 hover:text-white">Services</a></li>
-              <li><a href="/contact" className="text-base text-gray-300 hover:text-white">Contact</a></li>
-              <li><a href="/careers" className="text-base text-gray-300 hover:text-white">Careers</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-            <ul className="mt-4 space-y-2">
-              <li><a href="/privacy" className="text-base text-gray-300 hover:text-white">Privacy Policy</a></li>
-              <li><a href="/terms" className="text-base text-gray-300 hover:text-white">Terms of Service</a></li>
-              <li><a href="/cookies" className="text-base text-gray-300 hover:text-white">Cookie Policy</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact Us</h3>
-            <ul className="mt-4 space-y-2">
-              <li><span className="text-base text-gray-300">123 Maritime Ave, Karachi, Pakistan</span></li>
-              <li><span className="text-base text-gray-300">+92 300 1234567</span></li>
-              <li><span className="text-base text-gray-300">info@bakhsgroup.com</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p className="text-base text-gray-400">
-            &copy; {new Date().getFullYear()} Baksh Group. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer> */}
     </div>
   );
 };

@@ -39,10 +39,10 @@ const Home: React.FC = () => {
     { id: '2', title: 'Freight Forwarding' },
     { id: '3', title: 'Transportation' },
     { id: '4', title: 'Deport Service' },
-    { id: '5', title: 'Ship Husbandry' },
+    { id: '5', title: 'Vessel Handling' },
     { id: '6', title: 'Chartering and Stevedoring' },
     { id: '7', title: 'Project Cargo Handling' },
-    { id: '8', title: 'NVOCC' }
+    // { id: '8', title: 'NVOCC' }
   ];
 
   return (
@@ -150,8 +150,7 @@ const Home: React.FC = () => {
                           Let's work <span className="text-blue-600">together</span> on your destination
                         </h2>
                         <p className="text-gray-700">
-                          We're here to help you navigate the complexities of global shipping and logistics. 
-                          Our team of experts is ready to provide personalized solutions for your destination.
+                          Guiding you through the challenges of global shipping and logistics with expertise and reliability. Our team of experts is ready to provide personalized solutions for your destination
                         </p>
                       </div>
                     </div>
