@@ -88,31 +88,31 @@ const Navigation: React.FC = () => {
                     className="absolute mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-100 z-50"
                   >
                     <DropdownLink
-                      to="/about"
-                      title="Baksh Group"   
+                      to="/about#overview"
+                      title="Baksh Group"
                       // desc="Financial Services"
                       // img="/images/Bakhs_group.jpg"
                     />
                     <DropdownLink
-                      to="/about"
-                      title="Baksh Investment Limited"
+                      to="/about#baksh-investment"
+                      title="Baksh Shipping Lines (Pvt) Ltd"
                       // desc="Financial Services"
                       // img="/images/bakhs_limited.jpg"
                     />
                     <DropdownLink
-                      to="/about"
-                      title="Yaaseen Newss"
+                      to="/about#yaaseen-shipping"
+                      title="Yaaseen Shipping Lines"
                       // desc="Global Shipping"
                       // img="/images/yaseen_logo.png"
                     />
                     <DropdownLink
-                      to="/about"
+                      to="/about#yaaseen-pvt"
                       title="Yaaseen Shipping Lines (PVT) Ltd"
                       // desc="Global Shipping"
                       // img="/images/yaseen_logo.png"
                     />
                     <DropdownLink
-                      to="/about"
+                      to="/about#uosl"
                       title="UOSL Shipping & Logistics"
                       // // desc="End-to-end logistics"
                       // img="/images/uosl_logo.jpg"
@@ -232,17 +232,23 @@ const Navigation: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     className="pl-6 space-y-1"
                   >
-                    <MobileLink to="/baksh-group" label="Baksh Group" />
+                    <MobileLink to="/about#overview" label="Baksh Group" />
                     <MobileLink
-                      to="/baksh-investment"
-                      label="Baksh Investment"
+                      to="/about#baksh-investment"
+                      label="Baksh Shipping Lines (Pvt) Ltd"
                     />
-                    <MobileLink to="/yaaseen-about" label="Yaaseen Shipping" />
                     <MobileLink
-                      to="/yaaseen-pvt-ltd"
-                      label="Yaaseen Shipping (PVT) Ltd"
+                      to="/about#yaaseen-shipping"
+                      label="Yaaseen Shipping Lines"
                     />
-                    <MobileLink to="/uosl" label="UOSL Shipping" />
+                    <MobileLink
+                      to="/about#yaaseen-pvt"
+                      label="Yaaseen Shipping Lines (PVT) Ltd"
+                    />
+                    <MobileLink
+                      to="/about#uosl"
+                      label="UOSL Shipping & Logistics"
+                    />
                   </motion.div>
                 )}
               </AnimatePresence>

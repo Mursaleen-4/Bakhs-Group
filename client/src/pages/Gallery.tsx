@@ -25,7 +25,8 @@ const Gallery: React.FC = () => {
     { id: 'ports', name: 'Ports & Terminals', icon: <Anchor className="w-4 h-4" /> },
     { id: 'containers', name: 'Container Operations', icon: <Container className="w-4 h-4" /> },
     { id: 'logistics', name: 'Logistics', icon: <Truck className="w-4 h-4" /> },
-    { id: 'offices', name: 'Our Offices', icon: <Building2 className="w-4 h-4" /> }
+    { id: 'offices', name: 'Our Offices', icon: <Building2 className="w-4 h-4" /> },
+    { id: 'network', name: 'Our Network', icon: <Building2 className="w-4 h-4" /> }
   ];
 
   const galleryImages = [
