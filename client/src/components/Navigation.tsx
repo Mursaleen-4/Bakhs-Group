@@ -4,7 +4,6 @@ import {
   Menu,
   X,
   ChevronDown,
-  ChevronRight,
   User,
   // Image,
   // Newspaper,
@@ -63,6 +62,7 @@ const Navigation: React.FC = () => {
             <NavLink to="/">HOME</NavLink>
             <NavLink to="/about">ABOUT</NavLink>
 
+
             {/* Companies Dropdown */}
             <div
               className="relative"
@@ -107,13 +107,13 @@ const Navigation: React.FC = () => {
                     />
                     <DropdownLink
                       to="/about#yaaseen-pvt"
-                      title="Yaaseen Shipping Lines (PVT) Ltd"
+                      title="Yaaseen Shipping Lines (Pvt) Ltd"
                       // desc="Global Shipping"
                       // img="/images/yaseen_logo.png"
                     />
                     <DropdownLink
                       to="/about#uosl"
-                      title="UOSL Shipping & Logistics"
+                      title="UOSL Shipping & Logistics (Pvt) Ltd"
                       // // desc="End-to-end logistics"
                       // img="/images/uosl_logo.jpg"
                     />
@@ -155,11 +155,11 @@ const Navigation: React.FC = () => {
                     <DropdownItem to="/services/1" label="Liner Agency" />
                     <DropdownItem to="/services/2" label="Freight Forwarding" />
                     <DropdownItem to="/services/3" label="Transportation" />
-                    <DropdownItem to="/services/4" label="Deport Service" />
+                    <DropdownItem to="/services/4" label="Depot Service" />
                     <DropdownItem to="/services/5" label="Vessel Handling" />
                     <DropdownItem to="/services/6" label="Chartering and Stevedoring" />
                     <DropdownItem to="/services/7" label="Project Cargo Handling" />
-                    {/* <DropdownItem to="/services/8" label="NVOCC" /> */}
+                    <DropdownItem to="/services/8" label="Ship Husbandry" /> 
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -169,7 +169,7 @@ const Navigation: React.FC = () => {
               GALLERY
             </NavLink>
             <NavLink to="/News">
-            News
+            NEWS
             </NavLink>
             <NavLink to="/tariffs">TARIFFS</NavLink>
             <NavLink to="/contact">CONTACT</NavLink>
@@ -208,15 +208,15 @@ const Navigation: React.FC = () => {
             className="lg:hidden bg-white border-t"
           >
             <div className="px-4 py-4 space-y-2">
-              <MobileLink to="/" label="Home" />
-              <MobileLink to="/about" label="About" />
+              <MobileLink to="/" label="HOME" />
+              <MobileLink to="/about" label="ABOUT" />
 
               {/* Mobile Companies */}
               <button
                 onClick={() => setIsCompaniesOpen(!isCompaniesOpen)}
                 className="flex justify-between items-center w-full px-4 py-3 text-left text-gray-700 hover:bg-blue-50 rounded-lg"
               >
-                Group Of Companies
+                GROUP OF COMPANIES
                 <ChevronDown
                   className={`h-5 w-5 transition ${
                     isCompaniesOpen ? "rotate-180" : ""
@@ -243,11 +243,11 @@ const Navigation: React.FC = () => {
                     />
                     <MobileLink
                       to="/about#yaaseen-pvt"
-                      label="Yaaseen Shipping Lines (PVT) Ltd"
+                      label="Yaaseen Shipping Lines (Pvt) Ltd"
                     />
                     <MobileLink
                       to="/about#uosl"
-                      label="UOSL Shipping & Logistics"
+                      label="UOSL Shipping & Logistics (Pvt) Ltd"
                     />
                   </motion.div>
                 )}
@@ -258,7 +258,7 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                 className="flex justify-between items-center w-full px-4 py-3 text-left text-gray-700 hover:bg-blue-50 rounded-lg"
               >
-                Services
+                SERVICES
                 <ChevronDown
                   className={`h-5 w-5 transition ${
                     isServicesOpen ? "rotate-180" : ""
@@ -281,21 +281,21 @@ const Navigation: React.FC = () => {
                     <MobileLink to="/services/5" label="Vessel Handling" />
                     <MobileLink to="/services/6" label="Chartering and Stevedoring"/>
                     <MobileLink to="/services/7" label="Project Cargo Handling" />
-                    {/* <MobileLink to="/services/8" label="NVOCC" /> */}
+                     <MobileLink to="/services/8" label="Ship Husbandry" /> 
                   </motion.div>
                 )}
               </AnimatePresence>
-              <MobileLink to="/gallery" label="Gallery" />
-              <MobileLink to="/news" label="News" />
-              <MobileLink to="/tariffs" label="Tariffs" />
-              <MobileLink to="/schedule" label="Vessel Schedule" />
-              <MobileLink to="/contact" label="Contact" />
-              <MobileLink to="/login" label="Login" icon={<User />} />
+              <MobileLink to="/gallery" label="GALLERY" />
+              <MobileLink to="/news" label="NEWS" />
+              <MobileLink to="/tariffs" label="TARIFFS" />
+              <MobileLink to="/schedule" label="VESSEL SCHEDULE" />
+              <MobileLink to="/contact" label="CONTACT" />
+              <MobileLink to="/login" label="LOGIN" icon={<User />} />
               <Link
                 to="/quote"
                 className="block text-center px-4 py-2 text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg"
               >
-                Get Quote
+                GET QUOTE
               </Link>
             </div>
           </motion.div>
@@ -335,7 +335,6 @@ const DropdownLink = ({
       <div className="font-medium">{title}</div>
       {/* <div className="text-xs text-gray-500">{desc}</div> */}
     </div>
-    <ChevronRight className="w-4 h-4 text-gray-400" />
   </Link>
 );
 

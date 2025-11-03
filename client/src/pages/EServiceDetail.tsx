@@ -20,9 +20,10 @@ const defaultServices: IService[] = [
     longDescription: 'As a leading Shipping Agent, we provide end to end agency services to our Principals. Our team is well equipped with vessel handling, managing special equipment and committed to safeguarding our Principals interests.',
     icon: 'ship',
     features: [
-      'Trained staff to handle all kinds of containerized cargo.',
+      'Efficient handling of import and export shipments',
+      'Trained staff to handle all kinds of containerized cargo',
       'Proactive sales staff',
-      'In-house integrated Shipping software with EDI capabilities.',
+      'In-house integrated Shipping software with EDI capabilities',
       'Maintaining prompt correspondence with principals',
       'FCL & LCL Shipping'
     ],
@@ -56,13 +57,13 @@ const defaultServices: IService[] = [
       'Dangerous goods handling',
       'GPS tracking',
       'Empty units transportation to / from terminal / depot and up-country',
-      'We provide empty unit transportation service to / from terminal / depot and up-country as needed.'
+      'We provide empty unit transportation service to / from terminal / depot and up-country as needed'
     ],
     color: 'from-purple-500 to-purple-600'
   },
   {
     id: '4',
-    title: 'Deport Service',
+    title: 'Depot Service',
     description: 'Efficient container depot services',
     longDescription: 'Our empty depots are located at Prime locations with easy accessibility for transporters. We have the reliable resources for container positioning and management to support your logistics operations.',
     icon: 'package',
@@ -89,7 +90,8 @@ const defaultServices: IService[] = [
       'Vessel arrival and berthing prospects',
       'Bulk cargo handling',
       'Technical support',
-      'Bunkering and supplies',
+      'Supervision of cargo loading and discharging operations',
+      'Monitoring vessel performance',
       'Coordination with government and port authorities'
 
     ],
@@ -102,6 +104,7 @@ const defaultServices: IService[] = [
     longDescription: 'We provide professional vessel chartering services tailored to all types and sizes of ships. Our stevedoring services ensure efficient loading and unloading operations with experienced personnel and modern equipment.',
     icon: 'anchor',
     features: [
+      'Market analysis and freight rate assessment',
       'Time charter/ voyage charter',
       'State of the art  equipment to handle various types of cargo',
       'Cargo handling supervision',
@@ -125,21 +128,23 @@ const defaultServices: IService[] = [
     ],
     color: 'from-red-500 to-pink-600'
   },
-  // {
-  //   id: '8',
-  //   title: 'NVOCC',
-  //   description: 'Non-Vessel Operating Common Carrier services',
-  //   longDescription: 'As a licensed NVOCC, we offer flexible and cost-effective shipping solutions. We consolidate cargo from multiple shippers to provide competitive rates and reliable service on major trade lanes.',
-  //   icon: 'ship',
-  //   features: [
-  //     'Consolidation services',
-  //     'Bill of Lading issuance',
-  //     'Door-to-door solutions',
-  //     'Cargo insurance',
-  //     'Documentation services'
-  //   ],
-  //   color: 'from-indigo-500 to-violet-600'
-  // },
+  {
+    id: '8',
+    title: 'Ship Husbandry',
+    description: 'Comprehensive ship husbandry services for vessels',
+    longDescription: 'We provide reliable and efficient ship husbanding services to ensure smooth port operations. From crew handling and customs clearance to provisions, bunkering, and repairs, our experienced team manages every detail with precision. With strong ties to port authorities and service providers, we guarantee fast turnaround, cost efficiency, and complete compliance.',
+    icon: 'ship',
+    features: [
+      'Crew change assistance',
+      'Customs, immigration, and port clearance formalities',
+      'Ship repairs and maintenance arrangements',
+      'Fresh water, provisions, and spare parts delivery',
+      'Liaison with port authorities and terminal operators',
+      'Bunker supply.'
+
+    ],
+    color: 'from-indigo-500 to-violet-600'
+  }
   // {
   //   id: '9',
   //   title: 'Customs Clearance',

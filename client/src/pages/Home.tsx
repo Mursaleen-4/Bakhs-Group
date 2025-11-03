@@ -38,11 +38,11 @@ const Home: React.FC = () => {
     { id: "1", title: "Liner Agency" },
     { id: "2", title: "Freight Forwarding" },
     { id: "3", title: "Transportation" },
-    { id: "4", title: "Deport Service" },
+    { id: "4", title: "Depot Service" },
     { id: "5", title: "Vessel Handling" },
     { id: "6", title: "Chartering and Stevedoring" },
     { id: "7", title: "Project Cargo Handling" },
-    // { id: '8', title: 'NVOCC' }
+    { id: '8', title: 'Ship Husbandry' }
   ];
 
   return (

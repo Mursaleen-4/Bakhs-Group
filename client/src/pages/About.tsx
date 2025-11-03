@@ -113,7 +113,7 @@ const About: React.FC = () => {
     },
     {
       id: "yaaseen-pvt",
-      name: "Yaaseen Shipping (PVT) Ltd",
+      name: "Yaaseen Shipping (Pvt) Ltd",
       shortDescription:
         "Specialized cargo solutions and vessel operations with a focus on efficiency and reliability.",
       description:
@@ -149,11 +149,11 @@ const About: React.FC = () => {
     },
     {
       id: "uosl",
-      name: "UOSL Shipping & Logistics",
+      name: "UOSL Shipping & Logistics (Pvt) Ltd",
       shortDescription:
         "End-to-end logistics solutions with a focus on efficiency and customer satisfaction.",
       description:
-        "UOSL Shipping and Logicsctics (Pvt) Ltd , is a part of BAKSH group of companies, UOSL has established Off Dock Empty Container Park located at Karachi within city limit at well known location for customers at Maripur Truck Stand Hawks bay Road Karachi and around 6-7 km from Karachi Port, having a storage area of 8 acres land on which storage / operation commenced from 11th-April-2008 with back up area of another 4 acres for expansion on 2nd phase, depot having boundary wall.",
+        "UOSL Shipping and Logistics (Pvt) Ltd, is a part of BAKSH group of companies, UOSL has established Off Dock Empty Container Park located at Karachi within city limit at well known location for customers at Maripur Truck Stand Hawks bay Road Karachi and around 6-7 km from Karachi Port, having a storage area of 8 acres land on which storage / operation commenced from 11th-April-2008 with back up area of another 4 acres for expansion on 2nd phase, depot having boundary wall.",
       icon: <Truck className="w-8 h-8 text-blue-600" />,
       link: "/uosl",
       year: 2018,
