@@ -45,7 +45,7 @@ const About: React.FC = () => {
       shortDescription:
         "Strategic investment and financial services company driving growth in the maritime sector.",
       description:
-        "Baksh Shipping Lines (Pvt) Ltd. was established in 1967 as part of the Group’s strategic initiative to expand and diversify its business operations. ",
+        "Baksh Shipping Lines (Pvt) Ltd. was established in 1967 as part of the Group’s strategic initiative to expand and diversify its business operations.Our flexible service offerings include charter services ",
       icon: <Briefcase className="w-8 h-8 text-blue-600" />,
       link: "/baksh-investment",
       year: 2008,

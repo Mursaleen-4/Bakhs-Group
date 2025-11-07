@@ -15,6 +15,12 @@ const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCompaniesOpen, setIsCompaniesOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMediaOpen, setIsMediaOpen] = useState(false);
+  const mediaRef = useRef<HTMLDivElement>(null);
+  const [isPakistanOpen, setIsPakistanOpen] = useState(false);
+  const [isTerminalsOpen, setIsTerminalsOpen] = useState(false);
+  const pakistanRef = useRef<HTMLDivElement>(null);
+  const terminalsRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -34,6 +40,38 @@ const Navigation: React.FC = () => {
     };
   }, []);
 
+    // Gentle close delay to prevent accidental menu dismissals when moving cursor
+  const HOVER_CLOSE_DELAY = 200; // ms
+  const pakistanCloseTimer = useRef<number | null>(null);
+  const terminalsCloseTimer = useRef<number | null>(null);
+
+  const openPakistan = () => {
+    if (pakistanCloseTimer.current)
+      window.clearTimeout(pakistanCloseTimer.current);
+    setIsPakistanOpen(true);
+  };
+  const scheduleClosePakistan = () => {
+    if (pakistanCloseTimer.current)
+      window.clearTimeout(pakistanCloseTimer.current);
+    pakistanCloseTimer.current = window.setTimeout(() => {
+      setIsPakistanOpen(false);
+      setIsTerminalsOpen(false);
+    }, HOVER_CLOSE_DELAY);
+  };
+  const openTerminals = () => {
+    if (terminalsCloseTimer.current)
+      window.clearTimeout(terminalsCloseTimer.current);
+    setIsTerminalsOpen(true);
+    // Ensure parent stays open while interacting with child
+    openPakistan();
+  };
+  const scheduleCloseTerminals = () => {
+    if (terminalsCloseTimer.current)
+      window.clearTimeout(terminalsCloseTimer.current);
+    terminalsCloseTimer.current = window.setTimeout(() => {
+      setIsTerminalsOpen(false);
+    }, HOVER_CLOSE_DELAY);
+  };
   // Close menu when route changes
   useEffect(() => {
     setIsOpen(false);
@@ -46,15 +84,14 @@ const Navigation: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-2 sm:py-3">
           {/* Logo */}
-            <Link
-            to="/"
-            className="group flex items-center py-2 flex-shrink-0 z-50"
-          >
-            <img
-              src="/images/baksh1.png"
-              alt="Baksh Group Logo"
-              className="h-12 w-auto mr-2"
-            />
+          <Link to="/" className="group flex items-center py-2 flex-1 z-50">
+            <div className="h-12 w-full flex items-center">
+              <img
+                src="/images/baksh.png"
+                alt="Baksh Group Logo"
+                className="h-15 w-[60px] md:w-[360px] object-contain"
+              />
+            </div>
           </Link>  
 
           {/* Desktop Nav */}
@@ -128,21 +165,21 @@ const Navigation: React.FC = () => {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-  <button
-    onClick={(e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      setIsServicesOpen(!isServicesOpen);
-    }}
-    className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 flex items-center bg-transparent border-none cursor-pointer"
-  >
-    SERVICES
-    <ChevronDown
-      className={`ml-1 h-4 w-4 transition-transform ${
-        isServicesOpen ? "rotate-180" : ""
-      }`}
-    />
-  </button>
+            <button
+                onClick={(e) => {
+                e.preventDefault();
+                 e.stopPropagation();
+                 setIsServicesOpen(!isServicesOpen);
+                }}
+              className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 flex items-center bg-transparent border-none cursor-pointer"
+            >
+            SERVICES
+             <ChevronDown
+            className={`ml-1 h-4 w-4 transition-transform ${
+            isServicesOpen ? "rotate-180" : ""
+             }`}
+            />
+            </button>
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
@@ -165,15 +202,135 @@ const Navigation: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            <NavLink to="/gallery">
-              GALLERY
-            </NavLink>
-            <NavLink to="/News">
-            NEWS
-            </NavLink>
-            <NavLink to="/tariffs">TARIFFS</NavLink>
+            <div
+              className="relative"
+              ref={mediaRef}
+              onMouseEnter={() => setIsMediaOpen(true)}
+              onMouseLeave={() => setIsMediaOpen(false)}
+            >
+              <button className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 flex items-center">
+                MEDIA
+                <ChevronDown
+                  className={`ml-1 h-4 w-4 transition-transform ${
+                    isMediaOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <AnimatePresence>
+                {isMediaOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute mt-2 w-40 bg-white rounded-xl shadow-xl border border-gray-100 z-50"
+                  >
+                    <DropdownItem to="/gallery" label="GALLERY" />
+                    <DropdownItem to="/news" label="NEWS" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <NavLink to="/contact">CONTACT</NavLink>
-            <NavLink to="/schedule">VESSEL SCHEDULE</NavLink>
+            <NavLink to="/tariffs">TARIFFS</NavLink>
+                        <div
+              className="relative"
+              ref={pakistanRef}
+              onMouseEnter={openPakistan}
+              onMouseLeave={scheduleClosePakistan}
+            >
+              <button
+                type="button"
+                className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 flex items-center"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsPakistanOpen((prev) => !prev);
+                }}
+                aria-haspopup="true"
+                aria-expanded={isPakistanOpen}
+              >
+                PAKISTAN INSIGHTS
+                <ChevronDown
+                  className={`ml-1 h-4 w-4 transition-transform ${
+                    isPakistanOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <AnimatePresence>
+                {isPakistanOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 z-50"
+                    onMouseEnter={openPakistan}
+                    onMouseLeave={scheduleClosePakistan}
+                  >
+                    <DropdownItem
+                      to="/pakistan-insights"
+                      label="Our Pakistan"
+                    />
+                    <div className="border-t border-gray-100" />
+                    <div className="relative" ref={terminalsRef}>
+                      <button
+                        type="button"
+                        className="w-full text-left px-4 py-2 hover:bg-blue-50 cursor-pointer flex items-center justify-between"
+                        onMouseEnter={openTerminals}
+                        onMouseLeave={scheduleCloseTerminals}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setIsTerminalsOpen((prev) => !prev);
+                        }}
+                        aria-haspopup="true"
+                        aria-expanded={isTerminalsOpen}
+                      >
+                        <span className="text-sm text-gray-700">Terminals</span>
+                        <ChevronDown
+                          className={`h-4 w-4 text-gray-500 ${
+                            isTerminalsOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {isTerminalsOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -6 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -6 }}
+                            transition={{ duration: 0.12 }}
+                            className="absolute left-0 top-full mt-1 w-full bg-white rounded-xl shadow-xl border border-gray-100 z-50"
+                            onMouseEnter={openTerminals}
+                            onMouseLeave={scheduleCloseTerminals}
+                          >
+                            <DropdownItem
+                              to="/terminals/kict"
+                              label="Karachi International Container Terminal (KICT)"
+                            />
+                            <DropdownItem
+                              to="/terminals/sapt"
+                              label="South Asia Pakistan Terminal (SAPT)"
+                            />
+                            <DropdownItem
+                              to="/terminals/kgtl"
+                              label="Karachi Gateway Terminal Limited (KGTL)"
+                            />
+                            <DropdownItem
+                              to="/terminals/qict"
+                              label="Qasim International Container Terminal (QICT)"
+                            />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* <NavLink to="/schedule">VESSEL SCHEDULE</NavLink> */}
 
             {/* Right side */}
             <NavLink to="/login">
@@ -285,11 +442,102 @@ const Navigation: React.FC = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-              <MobileLink to="/gallery" label="GALLERY" />
-              <MobileLink to="/news" label="NEWS" />
-              <MobileLink to="/tariffs" label="TARIFFS" />
-              <MobileLink to="/schedule" label="VESSEL SCHEDULE" />
+              {/* Mobile MEDIA accordion */}
+              <button
+                onClick={() => setIsMediaOpen(!isMediaOpen)}
+                className="flex justify-between items-center w-full px-4 py-3 text-left text-gray-700 hover:bg-blue-50 rounded-lg"
+              >
+                MEDIA
+                <ChevronDown
+                  className={`h-5 w-5 transition ${
+                    isMediaOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <AnimatePresence>
+                {isMediaOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.15 }}
+                    className="pl-6 space-y-1"
+                  >
+                    <MobileLink to="/gallery" label="GALLERY" />
+                    <MobileLink to="/news" label="NEWS" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
               <MobileLink to="/contact" label="CONTACT" />
+              <MobileLink to="/tariffs" label="TARIFFS" />
+                            <button
+                onClick={() => setIsPakistanOpen(!isPakistanOpen)}
+                className="flex justify-between items-center w-full px-4 py-3 text-left text-gray-700 hover:bg-blue-50 rounded-lg"
+              >
+                PAKISTAN INSIGHTS
+                <ChevronDown
+                  className={`h-5 w-5 transition ${
+                    isPakistanOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <AnimatePresence>
+                {isPakistanOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.15 }}
+                    className="pl-6 space-y-1"
+                  >
+                    <MobileLink
+                      to="/pakistan-insights/our-pakistan"
+                      label="Our Pakistan"
+                    />
+                    <button
+                      onClick={() => setIsTerminalsOpen(!isTerminalsOpen)}
+                      className="flex justify-between items-center w-full px-4 py-2 text-left text-gray-700 hover:bg-blue-50 rounded-lg"
+                    >
+                      Terminals
+                      <ChevronDown
+                        className={`h-4 w-4 transition ${
+                          isTerminalsOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {isTerminalsOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.12 }}
+                          className="pl-4 space-y-1"
+                        >
+                          <MobileLink
+                            to="/pakistan-insights/terminals/kict"
+                            label="KICT"
+                          />
+                          <MobileLink
+                            to="/pakistan-insights/terminals/sapt"
+                            label="SAPT"
+                          />
+                          <MobileLink
+                            to="/pakistan-insights/terminals/kgtl"
+                            label="KGTL"
+                          />
+                          <MobileLink
+                            to="/pakistan-insights/terminals/qict"
+                            label="QICT"
+                          />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              {/* <MobileLink to="/schedule" label="VESSEL SCHEDULE" /> */}
+
               <MobileLink to="/login" label="LOGIN" icon={<User />} />
               <Link
                 to="/quote"

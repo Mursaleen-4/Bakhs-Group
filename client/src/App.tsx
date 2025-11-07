@@ -20,10 +20,15 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 // const EServices = React.lazy(() => import('./pages/EServices'));
 const EServiceDetail = React.lazy(() => import('./pages/EServiceDetail'));
 const Tariffs = React.lazy(() => import('./pages/Tariffs'));
-const Schedule = React.lazy(() => import('./pages/Schedule'));
+// const Schedule = React.lazy(() => import('./pages/Schedule'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const News = React.lazy(() => import('./pages/News'));
 const Login = React.lazy(() => import('./pages/Login'));
+const PakistanInsights = React.lazy(() => import('./pages/PakistanIinsights'));
+const KICT = React.lazy(() => import('./pages/terminals/KICT'));
+const SAPT = React.lazy(() => import('./pages/terminals/SAPT'));
+const KGTL = React.lazy(() => import('./pages/terminals/KGTL'));
+const QICT = React.lazy(() => import('./pages/terminals/QICT'));
 
 const PageLoader: React.FC = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -209,6 +214,16 @@ function App() {
                     </Layout>
                   }
                 />
+                <Route
+                  path="/pakistan-insights"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <PakistanInsights />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
                 {/* <Route
                   path="/services"
                   element={
@@ -242,7 +257,47 @@ function App() {
                     </Layout>
                   }
                 />
+                               <Route
+                  path="/terminals/kict"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <KICT />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />  
                 <Route
+                  path="/terminals/kgtl"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <KGTL />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />  
+                <Route
+                  path="/terminals/sapt"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <SAPT />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />  
+                <Route
+                  path="/terminals/qict"
+                  element={
+                    <Layout>
+                      <AnimatedRoute>
+                        <QICT />
+                      </AnimatedRoute>
+                    </Layout>
+                  }
+                />
+                {/* <Route
                   path="/schedule"
                   element={
                     <Layout>
@@ -251,7 +306,7 @@ function App() {
                       </AnimatedRoute>
                     </Layout>
                   }
-                />
+                /> */}
 
                 <Route path="/home" element={<Navigate to="/" replace />} />
 
