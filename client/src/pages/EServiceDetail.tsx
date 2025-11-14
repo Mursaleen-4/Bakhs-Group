@@ -22,9 +22,9 @@ const defaultServices: IService[] = [
     features: [
       'Efficient handling of import and export shipments',
       'Trained staff to handle all kinds of containerized cargo',
-      'Proactive sales staff',
       'In-house integrated Shipping software with EDI capabilities',
-      'Maintaining prompt correspondence with principals',
+      'Maintaining prompt correspondence with our maintained principals',
+      'Proactive sales staff',
       'FCL & LCL Shipping'
     ],
     color: 'from-blue-500 to-blue-600'

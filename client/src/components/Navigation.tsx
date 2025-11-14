@@ -132,7 +132,7 @@ const Navigation: React.FC = () => {
                     />
                     <DropdownLink
                       to="/about#baksh-investment"
-                      title="Baksh Investment Ltd"
+                      title="Baksh Investment Limited"
                       // desc="Financial Services"
                       // img="/images/bakhs_limited.jpg"
                     />
@@ -270,7 +270,7 @@ const Navigation: React.FC = () => {
                   >
                     <DropdownItem
                       to="/pakistan-insights"
-                      label="Our Pakistan"
+                      label="Overview"
                     />
                     <div className="border-t border-gray-100" />
                     <div className="relative" ref={terminalsRef}>
@@ -340,7 +340,7 @@ const Navigation: React.FC = () => {
               to="/quote"
               className="px-3 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg text-sm hover:from-blue-700 hover:to-blue-800 transition"
             >
-              <Quote className="w-4 h-4 mr-1 inline" /> GET QUOTE
+              <Quote className="w-4 h-4 mr-1 inline" /> GET A QUOTE
             </Link>
           </div>
 
@@ -392,7 +392,7 @@ const Navigation: React.FC = () => {
                     <MobileLink to="/about#overview" label="Baksh Group" />
                     <MobileLink
                       to="/about#baksh-investment"
-                      label="Baksh Investment Ltd"
+                      label="Baksh Investment Limited"
                     />
                     <MobileLink
                       to="/about#yaaseen-shipping"
@@ -492,7 +492,7 @@ const Navigation: React.FC = () => {
                   >
                     <MobileLink
                       to="/pakistan-insights/our-pakistan"
-                      label="Our Pakistan"
+                      label="Overview"
                     />
                     <button
                       onClick={() => setIsTerminalsOpen(!isTerminalsOpen)}
@@ -543,7 +543,7 @@ const Navigation: React.FC = () => {
                 to="/quote"
                 className="block text-center px-4 py-2 text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg"
               >
-                GET QUOTE
+                GET A QUOTE
               </Link>
             </div>
           </motion.div>

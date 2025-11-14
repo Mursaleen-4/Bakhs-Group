@@ -153,7 +153,7 @@ const About: React.FC = () => {
       shortDescription:
         "End-to-end logistics solutions with a focus on efficiency and customer satisfaction.",
       description:
-        "UOSL Shipping and Logistics (Pvt) Ltd, is a part of BAKSH group of companies, UOSL has established Off Dock Empty Container Park located at Karachi within city limit at well known location for customers at Maripur Truck Stand Hawks bay Road Karachi and around 6-7 km from Karachi Port, having a storage area of 8 acres land on which storage / operation commenced from 11th-April-2008 with back up area of another 4 acres for expansion on 2nd phase, depot having boundary wall.",
+        "UOSL Shipping and Logistics (Pvt.) Ltd. was founded in 2008 to provide professional depot and container yard services. That same year, the company established its first Off-Dock Empty Container Park in Karachi. Strategically located within city limits on Hawksbay Road, Mauripur, just 6–7 km from Karachi Port, the facility offers convenient access for transporters and customers.The Karachi yard spans 10 acres of storage space, supported by an additional 4 acres of backup land, all secured within boundary walls.",
       icon: <Truck className="w-8 h-8 text-blue-600" />,
       link: "/uosl",
       year: 2018,
@@ -195,7 +195,7 @@ const About: React.FC = () => {
     },
     {
       year: 1984,
-      event: "Appointed as agents for Orient Overseas Container Line (OOCL)",
+      event: "Appointed as agents for Orient Overseas Container Line (OOCL).Served As Terminal Operators for OOCL From 1984 To 2002.",
     },
     {
       year: 2006,
@@ -212,9 +212,44 @@ const About: React.FC = () => {
         "Launched dedicated freight forwarding division under UOSL Shipping and Logistics Pvt Ltd",
     },
     {
-      year: "2008-2011",
+      year: "2008",
       event:
-        "Established off-dock empty container depots in Karachi and Lahore Port",
+        "Established off-dock empty container depot in Karachi under the name, UOSL Shipping And Logistics Pvt Ltd, offering Customized Logistics Solutions To Domestic And Regional Clients",
+    },
+    {
+      year: "2011",
+      event:
+      "Opened a second off-dock empty container depot in Lahore, extending service to the same major clients.",
+    },
+    {
+      year: "2013",
+      event:
+      "Appointed as agents for W Container Lines Ltd.",
+    },
+    {
+      year: "2015",
+      event:
+      " Appointed as agents for China SOC Lines.",
+    },
+    {
+      year: "2016",
+      event:
+      "Appointed as agents for Metro Logistics International Pvt Ltd.",
+    },
+    {
+      year: "2019",
+      event:
+      "Launched A Dedicated Freight Forwarding Division under Zoom World (Pvt) Ltd",
+    },
+    {
+      year: "2024",
+      event:
+      "Appointed as agents for Shanghai Jin Jiang Shipping (Group) Co Ltd.",
+    },
+    {
+      year: "2025",
+      event:
+      "Baksh Shipping Lines (Pvt) Ltd was formed to manage and oversee principal vessels.",
     },
   ];
 
@@ -679,7 +714,7 @@ established in Karachi and Lahore Port, serving key clients.
                           </p>
                           <p className="text-gray-600 mb-6 leading-relaxed">
                             {company.id === "baksh-investment" &&
-                              "Baksh Investment Ltd maintains strong relationships with port authorities, customs departments, and other key stakeholders, ensuring smooth, efficient, and compliant vessel operations."}
+                              "Baksh Investment Limited maintains strong relationships with port authorities, customs departments, and other key stakeholders, ensuring smooth, efficient, and compliant vessel operations."}
                             {company.id === "yaaseen-pvt" && (
                               <>
                                 Over the years, Yaaseen Shipping Pvt Ltd has
@@ -701,7 +736,7 @@ established in Karachi and Lahore Port, serving key clients.
                           </p>
                           <p className="text-gray-600 mb-6 leading-relaxed">
                             {company.id === "baksh-investment" &&
-                              "In chartering, the company provides end-to-end solutions, covering vessel chartering, voyage coordination, and cargo movement for both import and export sectors. Baksh Investment Ltd has successfully arranged vessel charters for dry bulk, breakbulk, and project cargoes, maintaining strong relationships with regional and international shipowners, charterers, and brokers."}
+                              "In chartering, the company provides end-to-end solutions, covering vessel chartering, voyage coordination, and cargo movement for both import and export sectors. Baksh Investment Limited has successfully arranged vessel charters for dry bulk, breakbulk, and project cargoes, maintaining strong relationships with regional and international shipowners, charterers, and brokers."}
                             {company.id === "yaaseen-pvt" &&
                               "Through these strategic alliances, YSL has built a robust presence in both regional and global markets, offering reliable maritime and logistics solutions across a wide range of trade routes. The company’s dedicated team of professionals ensures that each client receives personalized service, timely communication, and efficient cargo handling, reinforcing YSL’s standing as a trusted and performance-driven shipping agency in Pakistan."}
                             {company.id === "uosl" &&

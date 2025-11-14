@@ -62,7 +62,7 @@ const SocialMedia: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-2">
-            GET SOCIAL WITH US
+            CONNECT WITH US
           </h2>
 
           <p className="text-blue-600 max-w-2xl mx-auto text-sm">
