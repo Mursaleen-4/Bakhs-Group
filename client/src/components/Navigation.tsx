@@ -132,7 +132,7 @@ const Navigation: React.FC = () => {
                     />
                     <DropdownLink
                       to="/about#baksh-investment"
-                      title="Baksh Shipping Lines (Pvt) Ltd"
+                      title="Baksh Investment Ltd"
                       // desc="Financial Services"
                       // img="/images/bakhs_limited.jpg"
                     />
@@ -392,7 +392,7 @@ const Navigation: React.FC = () => {
                     <MobileLink to="/about#overview" label="Baksh Group" />
                     <MobileLink
                       to="/about#baksh-investment"
-                      label="Baksh Shipping Lines (Pvt) Ltd"
+                      label="Baksh Investment Ltd"
                     />
                     <MobileLink
                       to="/about#yaaseen-shipping"

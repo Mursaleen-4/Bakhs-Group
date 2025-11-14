@@ -164,7 +164,7 @@ const Home: React.FC = () => {
                                       url(/images/service-${service.id}.png)`,
                     }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/50 flex items-center justify-center p-4 group-hover:from-blue-900/90 group-hover:via-blue-800/70 group-hover:to-blue-900/50 transition-all duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/20 flex items-center justify-center p-4 group-hover:from-blue-900/90 group-hover:via-blue-800/70 group-hover:to-blue-900/50 transition-all duration-300">
                       <motion.h3
                         className="text-xl font-bold text-white text-center"
                         initial={{ opacity: 0, y: 20 }}

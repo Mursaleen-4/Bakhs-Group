@@ -41,11 +41,11 @@ const About: React.FC = () => {
   const companies = [
     {
       id: "baksh-investment",
-      name: "Baksh Shipping Lines (Pvt) Ltd",
+      name: "Baksh Investment Limited",
       shortDescription:
         "Strategic investment and financial services company driving growth in the maritime sector.",
       description:
-        "Baksh Shipping Lines (Pvt) Ltd. was established in 1967 as part of the Group’s strategic initiative to expand and diversify its business operations.Our flexible service offerings include charter services ",
+        "Baksh Investment Limited was established in 1967 as part of the Group’s strategic initiative to expand and diversify its business operations.Our flexible service offerings include charter services ",
       icon: <Briefcase className="w-8 h-8 text-blue-600" />,
       link: "/baksh-investment",
       year: 2008,
@@ -187,7 +187,7 @@ const About: React.FC = () => {
     {
       year: 1967,
       event:
-        "Baksh Shipping Lines (Pvt) Ltd incorporated, expanding into stevedoring, terminal handling, and lighterage operations",
+        "Baksh Investment Limited incorporated, expanding into stevedoring, terminal handling, and lighterage operations",
     },
     {
       year: 1981,
@@ -659,7 +659,7 @@ established in Karachi and Lahore Port, serving key clients.
                           </p>
                           <p className="text-gray-600 mb-6 leading-relaxed">
                             {company.id === "baksh-investment" &&
-                              "In 1978, Baksh Shipping Lines (Pvt) Ltd resumed operations, initiating services in stevedoring, terminal handling, and lighterage operations. The company quickly established itself as a trusted contractor for major national organizations, including the Pakistan National Shipping Corporation (PNSC), Rice Export Corporation of Pakistan, and the Trading Corporation of Pakistan."}
+                              "In 1978, Baksh Investment Limited resumed operations, initiating services in stevedoring, terminal handling, and lighterage operations. The company quickly established itself as a trusted contractor for major national organizations, including the Pakistan National Shipping Corporation (PNSC), Rice Export Corporation of Pakistan, and the Trading Corporation of Pakistan."}
                             {company.id === "yaaseen-shipping" &&
                               "By combining deep industry knowledge with local market expertise, Yaaseen Shipping Lines continues to achieve consistent growth in volume and revenue, particularly through light cargo bookings and specialized logistics arrangements.  Its operational excellence is reinforced by reliable documentation, prompt communication, and close coordination with OOCL offices and customers. With a customer-centric approach, Yaaseen Shipping Lines focuses on nurturing long-term partnerships while actively expanding its clientele through superior service delivery, timely responses, and value-driven logistics solutions. "}
                             {company.id === "yaaseen-pvt" &&
