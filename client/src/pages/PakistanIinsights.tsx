@@ -103,7 +103,7 @@ const PakistanInsights: React.FC = () => {
                 <div className="font-semibold">241M+</div>
               </div>
               <div className="px-3 py-2 bg-white rounded-lg shadow-sm">
-                <div className="text-xs text-slate-400">Exports</div>
+                <div className="text-xs text-slate-400">Imports</div>
                 <div className="font-semibold">~USD 32B</div>
               </div>
               <div className="px-3 py-2 bg-white rounded-lg shadow-sm">
