@@ -100,7 +100,7 @@ const QICT: React.FC = () => {
                 { label: "Location", value: "50 Km from Karachi City" },
                 { label: "Operator", value: "DP World" },
                 { label: "Best For", value: "Upcountry Customers" },
-                { label: "Cities", value: "Lahore, Faisalabad, Multan" },
+                { label: "Terminal Draft", value: "12.5 meters" },
               ].map((item) => (
                 <div
                   key={item.label}

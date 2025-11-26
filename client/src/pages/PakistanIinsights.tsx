@@ -125,7 +125,7 @@ const PakistanInsights: React.FC = () => {
 
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/images/p1.jpeg"
+                  src="/images/p1.png"
                   alt="Pakistan infrastructure and coast"
                   className="w-full h-72 object-cover sm:h-80 md:h-96"
                 />
@@ -332,7 +332,7 @@ const PakistanInsights: React.FC = () => {
               className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100"
             >
               <img
-                src="/images/p2.jpg"
+                src="/images/p2.jpeg"
                 alt="Karachi Port Cluster"
                 className="w-full h-56 md:h-64 object-cover"
               />

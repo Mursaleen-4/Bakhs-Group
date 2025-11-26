@@ -358,7 +358,7 @@ const About: React.FC = () => {
                 Our Group{" "}
               </h2>
               <img
-                src="/images/baksh1.png"
+                src="/images/baksh.png"
                 alt="Baksh Group Logo"
                 className="h-12 w-auto mr-2"
               />
