@@ -379,27 +379,33 @@ const EServiceDetail: FC = (): ReactElement => {
         </button> */}
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+
+
           {/* Header with gradient */}
           <div className={`${service.color} h-2 w-full`}></div>
-          
-          <div className="p-6 md:p-10">
-            <div className="flex flex-col md:flex-row md:items-center mb-8">
-              {/* <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
-                {IconComponent && (
-                  <div className="p-4 rounded-xl bg-opacity-10 bg-gray-900">
-                    <IconComponent className={`h-12 w-12 ${service.color.replace('from-', 'text-').split(' ')[0]}`} />
-                  </div>
-                )}
-              </div> */}
-              <div>
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                  {service.title}
-                </h1>
-                <p className="text-lg text-gray-600">
-                  {service.description}
-                </p>
-              </div>
+
+          {/* Option 3: Background Header with Overlay */}
+          <div
+            className="relative h-96 w-full bg-cover bg-center group"
+            style={{
+              backgroundImage: `url(/images/service-${service.id}.jpg), 
+                              url(/images/service-${service.id}.jpeg), 
+                              url(/images/service-${service.id}.png)`
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+                {service.title}
+              </h1>
+              <p className="text-xl text-gray-100 max-w-3xl drop-shadow-md">
+                {service.description}
+              </p>
             </div>
+          </div>
+
+          <div className="p-6 md:p-10">
+
 
             <div className="prose max-w-none">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
