@@ -46,7 +46,7 @@ const BakshInvestment: React.FC = () => {
     {
       year: '1967',
       title: 'New Horizons',
-      event: 'Baksh Investment Limited incorporated, marking our official entry into diversified business operations',
+      event: 'Baksh Shipping Lines incorporated, marking our official entry into diversified business operations',
       icon: Briefcase
     },
     {
@@ -141,7 +141,7 @@ const BakshInvestment: React.FC = () => {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-6 sm:mb-10 px-2 sm:px-0"
               >
-                For over five decades, Baksh Investment Limited has been at the forefront of maritime innovation, connecting markets and powering global trade with unwavering commitment and excellence.
+                For over five decades, Baksh Shipping Lines has been at the forefront of maritime innovation, connecting markets and powering global trade with unwavering commitment and excellence.
               </motion.p>
 
               <motion.div 
@@ -187,7 +187,7 @@ const BakshInvestment: React.FC = () => {
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 px-2 sm:px-0">Our Legacy</h2>
               <div className="prose prose-sm sm:prose-base md:prose-lg text-gray-600 px-2 sm:px-0">
                 <p>
-                  Baksh Investment Limited stands as a testament to Pakistan's maritime heritage, tracing its roots back to 1951. 
+                  Baksh Shipping Lines stands as a testament to Pakistan's maritime heritage, tracing its roots back to 1951. 
                   As one of the country's most established shipping and logistics companies, we have been at the forefront of 
                   transforming Pakistan's maritime industry through innovation, integrity, and excellence.
                 </p>
@@ -454,7 +454,7 @@ const BakshInvestment: React.FC = () => {
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">Ready to Transform Your Logistics?</h2>
             <p className="text-sm sm:text-base md:text-lg text-yellow-100 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-              Join hands with Baksh Investment Limited and experience a partnership built on <span className="text-primary-300 font-medium">seven decades</span> of excellence in maritime and logistics solutions.
+              Join hands with Baksh Shipping Lines and experience a partnership built on <span className="text-primary-300 font-medium">seven decades</span> of excellence in maritime and logistics solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 max-w-md mx-auto px-2 sm:px-0">

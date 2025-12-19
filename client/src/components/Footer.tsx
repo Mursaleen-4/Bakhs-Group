@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
     { name: 'Vessel Handling', href: '/services/5' },
     { name: 'Chartering and Stevedoring', href: '/services/6' },
     { name: 'Project Cargo Handling', href: '/services/7' },
-    { name: 'Ship Husbandryx', href: '/services/8' }
+    { name: 'Ship Husbandry', href: '/services/8' }
   ];
 
   // const eServices = [
